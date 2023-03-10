@@ -39,7 +39,7 @@ html {
 
 body{
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
   font-family:'Helvetica Neue Normal' ;
 }
 
@@ -561,6 +561,7 @@ main{
       .popup-pacman{
         width: 40%;
         position: relative;
+        display: none;
         top: 20vh;
         height: 95vh;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -1067,9 +1068,9 @@ main{
   .jajaja-section-1{position: static;}
 }
 
-@media only screen and (min-width: 1200px) {
-  .jajaja-desktop-icons{position: absolute;right: -20rem}
-}
+// @media only screen and (min-width: 1200px) {
+//   .jajaja-desktop-icons{position: absolute;right: -20rem}
+// }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
