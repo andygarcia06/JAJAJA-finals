@@ -1,0 +1,1135 @@
+$theme-colors: (
+    "primary": #e63329,
+    "secondary": #fafbf8,
+    "danger": #EE691C
+);
+
+@font-face {
+    font-family: "JAJAJA";
+    src: url("../../public/fonts/JAJAJA.ttf"); }
+  
+@font-face {
+    font-family: "Pragmatica";
+    src: url("../../public/fonts/Pragmatica-ExtraLight.ttf"); }
+
+@font-face {
+    font-family: "Helvetica Neue Normal";
+    src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-Roman.otf"); }
+
+@font-face {
+    font-family: "Helvetica Neue Bolderx1";
+    src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-Cn.otf"); }
+
+@font-face {
+    font-family: "Helvetica Neue Bolderx2";
+    src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-BdCn.otf"); }
+
+@font-face {
+    font-family: "Helvetica Neue Bolderx3";
+    src: url("../../public/fonts/HelveticaNeue/HelveticaNeueLTPro-Bd.otf"); }
+
+
+
+// GENERAL 
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+  // overflow: hidden;
+  font-family:'Helvetica Neue Normal' ;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'JAJAJA';
+}
+
+
+a{
+  animation: wheelTxtColor 20s infinite;
+}
+
+.jajaja-fts-10{
+  font-size: 700%;
+}
+
+
+.jajaja-fts-5{
+  font-size: 500%;
+}
+
+.jajaja-pixel-model{
+  width: 50%;
+  height: 50%;
+}
+
+// #jajaja-pixel-recipe{
+//   rotate: 90deg;
+// }
+
+
+.jajaja-fts-2{
+  font-size: 200%;
+}
+
+.jajaja-no-overflow{
+  overflow: hidden;
+}
+
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #e63329;
+  opacity: 1; /* Firefox */
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #e63329;
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #e63329;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #e63329ed;
+}
+
+.jajaja-svg{
+  animation: svgJajaja 20s infinite
+}
+
+.jajaja-svg-nav{
+  width: 20%;
+}
+
+// I- JAJAJA-NAV
+
+header{
+  width: auto;
+  font-family: 'Helvetica Neue Bolderx2';
+  text-transform: uppercase;
+
+  .nav-color{
+    color: #EE691C,;
+  }
+}
+
+.jajaja-nav{
+  position: relative;
+  right: 13%;
+}
+
+.jajaja-nav-hour-change{
+  position: relative;
+  top: 20%;
+  right: 10%;
+  cursor: pointer;
+}
+
+main{
+  width: auto;
+  animation: wheelTextColor 20s infinite, wheelBackgroundColor 20s infinite;
+}
+
+.txt-animated{
+  animation: wheelTxtColor 20s infinite;
+}
+
+
+.nav-item{
+  color: #EE691C !important;
+}
+
+.jajaja-close-section{
+  position: relative;
+  left: 96%;
+  font-size: 200%;
+  animation: wheelTextColor 20s infinite;
+  text-decoration: none;
+}
+
+.jajaja-search{
+  text-transform: uppercase;
+  position: relative;
+  text-align: right;
+  left: 12rem;
+  font-size: 100%;
+  font-family: 'Helvetica Neue Bolderx3';
+}
+
+
+// II- JAJAJA SECTION 1
+  
+   .jajaja-section-1{
+    width: auto;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url('../../public/img/KODAK/21.jpg');
+    background-size: cover;
+    // position: relative;
+
+    .jajaja-main-modal-container{
+      width: 70%;
+      height: 100vh;
+    }
+
+    .jajaja-icon-bottle{
+      transform: rotate(90);
+    }
+
+    .jajaja-desktop-icons{
+      width: 30%;
+
+      .jajaja-icons{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        .jajaja-icon{
+          width:50%;
+          margin: auto;
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          .jajaja-icon-img{
+            text-align: center;
+            align-items: center;
+            height: 6vh;
+            width: 6rem;
+            
+
+            .jajaja-icon-img-container{
+              margin:auto;
+
+
+              img{
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+          }
+          .jajaja-icon-name{
+            position: relative;
+            bottom: 2vh;
+            .jajaja-icon-name-text{
+              background-color: white;
+              margin: auto;
+              font-size: 60%;
+              color: black;
+              width: 4rem;
+            }
+
+          }
+        }
+      }
+
+    }
+   }
+
+  //  ALL BG
+
+  .bg-1{
+    background-image: url('../../public/img/FONDS-COULEUR/bleu.jpg');
+  }
+
+  .bg-2{
+    background-image: url('../../public/img/FONDS-COULEUR/Sans-titre-1.jpg');
+  }
+
+  .bg-3{
+    background-image: url('../../public/img/KODAK/10.jpg');
+  }
+
+  .bg-4{
+    background-image: url('../../public/img/KODAK/16.jpg');
+  }
+
+  .bg-5{
+    background-image: url('../../public/img/KODAK/21.jpg');
+  }
+
+  .bg-6{
+    background-image: url('../../public/img/KODAK/27.jpg');
+  }
+
+  .bg-7{
+    background-image: url('../../public/img/KODAK/8.jpg');
+  }
+
+   // III- JAJAJA SECTION 2
+
+   .jajaja-section-2{
+    width: auto;
+    height: 110vh;
+    color: #e63329 !important;
+ 
+
+    .jajaja-swiper{
+      height: 100vh;
+      margin: auto;
+    }
+   }
+
+   .jajaja-swiper-slide{
+    padding: 10% 0 0 0;
+
+    h1,h2,h3,h4,h5{
+      color: #e63329 !important;
+    }
+
+    svg{
+      height: 20%;
+      width: 20%;
+    }
+
+    .jajaja-swiper-slide-left{
+      width: 50%;
+    }
+
+    .jajaja-swiper-slide-right{
+      width: 50%;
+      padding: 10% 5% 5% 5%;
+    }
+
+    #jajaja-swiper-slide-1{
+      display: flex;
+      flex-direction: row;
+    }
+
+   }
+
+   // IV- JAJAJA MODAL
+
+   .jajaja-wrapper{
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    text-align: center;
+    background-color: #fafbf8;
+    position: absolute;
+    display: none;
+
+    .jajaja-modal-header{
+      cursor: grab;
+      height: 10vh;
+    }
+
+
+
+   }
+
+   .jajaja-header-btns{
+    width: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .jajaja-header-circle{
+      border: 2px solid black;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      color: black;
+      box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75);
+      -moz-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75);
+      .jajaja-modal-closer{
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+
+    .jajaja-header-circle:nth-child(1){
+      background-color: #e63329;
+    }
+
+  }
+
+
+
+    // 1) MAIN MODAL
+
+    .wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 65vh;
+        width: 30%;
+        max-width: 100%;
+        z-index: 1;
+        display: block;
+        color: #e63329;
+ 
+      }
+      .wrapper header{
+        border-bottom: 1px solid black;
+        height: 5vh;
+      }
+      .wrapper header.active{
+        cursor: grab;
+        user-select: none;
+      }
+      .wrapper .content{
+        display: flex;
+        padding: 30px 30px 40px 30px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .content .icon{
+        // height: 195px;
+        width: 100%;
+        margin: 2vh 0;
+        // border-radius: 50%;
+        // border: 5px solid #6F36FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .content .icon i{
+        font-size: 60px;
+      }
+      .content .title{
+        margin: 15px 0;
+        font-size: 29px;
+        font-weight: 500;
+      }
+      .content p{
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .modal-part{
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+      }
+
+      // 2) MODAL RECIPE WRAPPER
+
+      .modal-recipe-wrapper{
+        width: 60%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 30%;
+        height: 80vh;
+        z-index: 1;
+        color: #e63329 !important;
+
+        .jajaja-header-btns{
+          width: 10%;
+        }
+
+
+        .question-mark-icon{
+          position: relative;
+          left: 45%;
+          font-size: 200%;
+          cursor: pointer;
+          text-decoration: none;
+          color: #e63329;
+
+        }
+
+        .jajaja-modal-content{
+
+        }
+        .modal-recipe-content iframe{
+          width: 100%;
+          height: 70vh;
+        }
+
+      }
+
+      // 3) MODAL SOCIAL WRAPPER
+
+      .modal-social-wrapper{
+        width: 30%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 20%;
+        height: 40vh;
+        z-index: 1;
+
+        .modal-social-content{
+
+        }
+        .modal-social-content iframe{
+          width: 100%;
+          height: 65vh;
+        }
+
+      }
+
+      // 4) MODAL MUSIC WRAPPER
+
+      .modal-music-wrapper{
+        width: 28%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 20%;
+        height: 75vh;
+        z-index: 1;
+
+        .modal-music-content{
+
+        }
+        .modal-music-content iframe{
+          width: 100%;
+          height: 65vh;
+        }
+
+      }
+
+    
+      // 5) MODAL ALL RECIPES WRAPPER
+
+
+      .modal-all-recipe-wrapper{
+        width: 60%;
+        transform: translate(-50%, -50%);
+        top: 60%;
+        left: 30%;
+        height: 85vh;
+        z-index: 1;
+
+        .modal-all-recipe-content{
+
+        }
+        .modal-all-recipe-content iframe{
+          width: 100%;
+          height: 65vh;
+        }
+
+      }
+
+      // 6) RIGHT CLICK POPUP
+
+      #popup {
+        display: none;
+        position: absolute;
+        height: 50vh;
+        width: 20%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        text-align: center;
+        background-color: #fafbf8;
+        border-radius:10px;
+        -webkit-text-stroke:1px solid #fff;
+        header{
+          height: 10vh;
+          border-bottom: 2px solid black;
+        }
+        .jajaja-header-btns{
+          width: 20%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+      
+        }
+      }
+
+      // 7)HOW TO RECIPE WRAPPER
+
+      .modal-recipe-howto-wrapper{
+        background-color: rgba(204, 33, 28,0.99);;
+        position: absolute;
+        left: 80%;
+        top: 13%;
+        z-index: 30000000000;
+        width: 24%;
+        height: 30vh;
+        border-radius: 10px;
+        display: none;
+        animation: wheelTextColor 20s infinite ;
+
+        .modal-recipe-howto-closer{
+          position: relative;
+          left: 43%;
+        }
+      }
+
+      // 8)PACMAN POPUP
+
+      .popup-pacman{
+        width: 40%;
+        position: relative;
+        top: 20vh;
+        height: 95vh;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 10px;
+        header{
+          height: 10vh;
+        }
+        .jajaja-popup-iframe{
+          iframe{
+            height: 85vh;
+            width: 100%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+
+      // MODAL DATE WRAPPER
+
+      .modal-date-wrapper{
+        background-color: rgba(204, 33, 28,0.99);;
+        // position: absolute;
+        // left: 80%;
+        // top: 13%;
+        z-index: 40000000000;
+        width: 24%;
+        height: 50vh;
+        border-radius: 10px;
+        animation: wheelTextColor 20s infinite 
+
+      }
+
+      .jajaja-popup-content{
+        width: 100%;
+        .jajaja-popup-row{
+          display: flex;
+          flex-direction: row;
+          .jajaja-popup-menu{
+            width:50%;
+
+            .jajaja-popup-icon{
+              background-image: url('../../public/img/PIXELS/ghettoblater1.png');
+              background-size: contain;
+              height: 15vh;
+              width: 9rem;
+              margin: auto;
+            }
+
+            .jajaja-popup-icon-name-text{
+              background: #ffe4c4;
+              width: 4rem;
+              padding:4px 10px;
+              margin: auto;
+              font-size: 40%;
+              position:relative;
+              bottom: 5vh;
+              text-align: center;
+            }
+          }
+        }
+        
+      }
+
+      // .jajaja-popup-content{
+      //   .jajaja-popup-menu{
+      //     width: 50%;
+      //     text-align: center;
+      //     margin: 5vh 0;
+      //     background-color: #e63329;
+      //     .jajaja-popup-icon{
+      //       width: 100px;
+      //       height: 100px;
+      //       border-radius: 50px;
+      //       margin: auto;
+      //       box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.45);
+      //       -webkit-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.45);
+      //       -moz-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.45);
+      //       cursor: pointer;
+      //       background-image: url('../../public/img/PIXELS/ghettoblater1.png');
+      //       background-size: 120%, cover;
+
+      //       .jajaja-popup-icon-img{
+      //         width: 10rem;
+      //         height: 14vh;
+      //         margin: auto;
+      //         border: 1px solid #e63329;
+      //       }
+            
+      //     }
+      //   }
+    
+      //   .jajaja-popup-icon:hover{
+      //     transform: scale(1.1);
+      //     background-color: #e63329;
+      //     box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.45);
+      //     -webkit-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.45);
+      //     -moz-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.45);
+    
+      //     i{
+      //       color: #fff;
+      //     }
+      //   }
+      // }
+      
+
+  //  V- POPUP    
+
+
+    // 1) POPUP BACKGROUND
+    .popup-background{
+      display: none;
+      position: relative;
+      height: 50vh;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      text-align: center;
+      background-color: #fafbf8;
+      border-radius:10px;
+      -webkit-text-stroke:1px solid #fff;
+      transform: translate(-40%, -50%);
+      overflow-y: scroll;
+
+      .modal-bg-header{
+        .jajaja-header-btns{
+          width: 20%;
+        }
+      }
+
+      h3{
+        color: black !important;
+      }
+
+      .popup-container{
+        overflow-y: scroll; height: 60vh;
+      }
+    }
+
+    .jajaja-background{
+      width: 50%;
+      height: 10vh;
+      text-align: center;
+      border:0.5px solid #fff;
+      .jajaja-background-container{
+        width: 100%;
+        height: 10vh;
+        background-repeat: no-repeat;
+        background-size:cover;
+      }
+
+      #jajaja-bg-1{
+        background-image: url('../../public/img/FONDS-COULEUR/bleu.jpg');
+        
+      }
+
+      #jajaja-bg-2{
+        background-image: url('../../public/img/FONDS-COULEUR/Sans-titre-1.jpg');
+      }
+
+      #jajaja-bg-3{
+        background-image: url('../../public/img/KODAK/10.jpg');
+      }
+
+      #jajaja-bg-4{
+        background-image: url('../../public/img/KODAK/16.jpg');
+      }
+
+      #jajaja-bg-5{
+        background-image: url('../../public/img/KODAK/21.jpg');
+      }
+
+      #jajaja-bg-6{
+        background-image: url('../../public/img/KODAK/27.jpg');
+      }
+
+      #jajaja-bg-7{
+        background-image: url('../../public/img/KODAK/8.jpg');
+      }
+
+      .jajaja-background-container:hover{
+        border: 3px solid rgba(204, 33, 28,0.7);
+      }
+    }
+
+    // 2) POPUP CLOCK
+    .popup-clock{
+      display: none;
+      height: 50vh;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      text-align: center;
+      background-color: #fafbf8;
+      border-radius:10px;
+      -webkit-text-stroke:1px solid #fff;
+      transform: translate(40%, -50%);
+      overflow-y: scroll;
+
+      .modal-clock-header{
+        .jajaja-header-btns{
+          width: 20%;
+        }
+      }
+
+      h3{
+        color: black !important;
+      }
+
+      .popup-container{
+        overflow-y: scroll; height: 60vh;
+      }
+
+      .jajaja-clock-container{
+        button{
+          width: 80%;
+          margin: 2vh auto;
+          border: 2px solid #e63329;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          color: #e63329 !important;
+          background-color: #fafbf8;
+        }
+
+        button:hover{
+          transform: scale(1.1);
+          color: #fafbf8 !important;
+          background-color: #e63329;
+        }
+      }
+    }
+
+
+
+
+
+// JAJAJA RECIPE
+
+.swiper-slide{
+  
+  width: 80%;
+  margin: 0 auto;
+  h1,h2,h3,h4,h5,i{
+    animation: wheelTextColor 20s infinite;
+    -webkit-text-stroke:1px solid #fff;
+  }
+}
+
+.swiper{
+  cursor: grab;
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+}
+
+  .swiper-pagination::after{
+  }
+}
+
+#slide-1{
+    height: 110vh;
+    background-color: black;
+}
+
+#slide-2{
+  background-color: #e63329;
+  animation: wheelBackgroundColor 20s infinite;
+  height: 110vh;
+}
+
+.jajaja-recipe-txt{
+  text-align: center;
+
+  .jajaja-recipe-info-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.jajaja-title-centered{
+  text-align: center;
+}
+
+#background-video {
+  object-fit: cover;
+  width: 100%;
+  height: 110vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.jajaja-recipe-video-txt{
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+  text-align: center;
+
+  .swiper-button-next{
+    font-size: 100%;
+    position: absolute;
+    top: 90vh;
+    right: 1rem;
+    z-index: 10000;
+    animation: wheelTextColor 20s infinite;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  .jajaja-recipe-video-txt-icons{
+    width: 100% ;
+  }
+}
+
+.jajaja-recipe-body{
+  margin-top: 2vh;
+}
+
+
+.jajaja-container{
+  padding:1%;
+
+  .swiper-button-prev{
+    font-size: 100%;
+    position: absolute;
+    top: 10vh;
+    right: 1rem;
+    z-index: 10000;
+    animation: wheelTextColor 20s infinite;
+  }
+}
+
+.jajaja-recipe-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.jajaja-recipe-left-column{
+  width: 60%;
+  padding: 0 2rem;
+}
+
+.jajaja-margin-top{
+  margin-top: 40px;
+}
+
+.jajaja-list{
+  font-size: 60%;
+  width:100%
+}
+
+.jajaja-recipe-right-column{
+  width: 40%;
+  padding: 0 2rem;
+
+  ul{
+    list-style: none;
+  }
+
+  .jajaja-recipe-tags{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+
+    a{
+      animation: wheelTxtNavColor 20s infinite;
+    }
+
+    .jajaja-label{
+      padding: 0.5rem 2rem;
+      animation: wheelBackgroundNavColor 20s infinite;
+      border-radius: 20px;
+      
+    }
+  }
+}
+
+// ALL RECIPES
+
+.jajaja-recipes-recipe{
+
+  .jajaja-recipes-recipe-img{
+    img{
+      width: 100%;
+    }
+  }
+
+  .jajaja-recipes-recipe-txt{
+    padding: 2% 2%;
+  }
+  .jajaja-recipes-recipe-title{
+    margin: auto;
+
+    h2{
+      font-size: 190%;
+    }
+  }
+  .jajaja-recipes-recipe-icons{
+    .jajaja-recipes-recipe-icons-icon{
+      display: flex;
+      flex-direction: row;
+    }
+
+    i{
+      font-size: 160%;
+    }
+
+    p{
+      position: relative;
+      top: 6px;
+      left: 8px;
+    }
+  }
+
+  .jajaja-recipes-recipe-list{
+    .jajaja-recipes-recipe-ul{
+      list-style-type: circle;
+    }
+  }
+
+  .jajaja-recipes-recipe-btn{
+
+    margin-top: 7%;
+    button{
+      width: 45%;
+      border-radius: 30px;
+      padding: 2% 1%;
+      margin: auto;
+
+    }
+  }
+}
+
+#recipe-1{
+  .jajaja-recipes-recipe-img{
+    background-image: url('../../public/img/all-recipes/homemade-mexican-chorizo-queso-oaxaca-dip-2021-12-09-07-26-04-utc.jpg');
+    background-size: 150vh;
+  }
+
+  .jajaja-recipes-recipe-txt{
+    background-color:rgba(255, 228, 196,0.9);
+    color: #e63329;
+
+    .jajaja-recipes-recipe-btn{
+      button{
+        background-color: #e63329;
+        color: #ffe4c4;
+      }
+    }
+  }
+}
+
+#recipe-2{
+  .jajaja-recipes-recipe-img{
+    background-image: url('../../public/img/all-recipes/traditional-mexican-food-2021-08-30-10-27-37-utc.jpg');
+    background-size: 150vh;
+  }
+
+  .jajaja-recipes-recipe-txt{
+    background-color: rgba(164, 20, 12, 0.9);
+    color: rgb(183, 222, 247);;
+
+    .jajaja-recipes-recipe-btn{
+      button{
+        background-color: rgb(183, 222, 247);;
+        color: rgb(164, 20, 12);
+      }
+    }
+  }
+}
+
+#recipe-3{
+  .jajaja-recipes-recipe-img{
+    background-image: url('../../public/img/all-recipes/traditional-mexican-tacos-with-meat-2022-01-18-23-43-42-utc.jpg');
+    background-size: 150vh;
+  }
+
+  .jajaja-recipes-recipe-txt{
+    background-color: rgba(247, 158, 11, 0.9);
+    color: rgb(0, 139, 70);
+
+    .jajaja-recipes-recipe-btn{
+      button{
+        background-color: rgb(0, 139, 70);
+        color: rgb(247, 158, 11);
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  .jajaja-wrapper{width: 100%;top: 50%;left: 50%;height: 85vh;max-width: 100%;z-index: 1;
+  .jajaja-swiper{.jajaja-swiper-slide{color: #e63329;}}};
+  .jajaja-fts-10{font-size: 400%};
+  #jajaja-swiper-slide-1{flex-direction: column;text-align: center; .jajaja-swiper-slide-left{width: 100%}.jajaja-swiper-slide-right{text-align: center; width: 100%}};
+  #popup{width: 100%;}
+}
+
+@media only screen and (max-width: 1200px) {
+  .jajaja-section-1{position: static;}
+}
+
+@media only screen and (min-width: 1200px) {
+  .jajaja-desktop-icons{position: absolute;right: -20rem}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+
+
+// KEYFRAME
+
+@keyframes wheelBackgroundColor {
+    from, to { background-color: rgb(164, 20, 12); }
+    10%      { background-color: rgb(255, 224, 0); }
+    30%      { background-color: rgb(232, 78, 27); }
+    50%      { background-color: rgb(235, 170, 201); }
+    70%      { background-color: rgb(183, 222, 247); }
+    90%     { background-color: rgb(247, 158, 11); }
+}
+
+@keyframes wheelTextColor {
+    from, to { color: rgb(243, 244, 236); }
+    10%      { color: rgb(213, 38, 68); }
+    30%      { color: rgb(255, 224, 0); }
+    50%      { color: rgb(183, 222, 247); }
+    70%      { color: rgb(204, 33, 28); }
+    90%     { color: rgb(0, 139, 70); }
+}
+
+@keyframes wheelBackgroundNavColor {
+    from, to { background-color: rgb(243, 244, 236); }
+    10%      { background-color: rgb(213, 38, 68); }
+    30%      { background-color: rgb(255, 224, 0); }
+    50%      { background-color: rgb(183, 222, 247); }
+    70%      { background-color: rgb(204, 33, 28); }
+    90%     { background-color: rgb(0, 139, 70); }
+}
+
+@keyframes wheelTxtNavColor {
+    from, to { color: rgb(164, 20, 12); }
+    10%      { color: rgb(255, 224, 0); }
+    30%      { color: rgb(232, 78, 27); }
+    50%      { color: rgb(235, 170, 201); }
+    70%      { color: rgb(183, 222, 247); }
+    90%     { color: rgb(247, 158, 11); }
+}
+
+@keyframes svgJajaja {
+  from, to { fill: rgb(243, 244, 236); }
+  10%      { fill: rgb(213, 38, 68); }
+  30%      { fill: rgb(255, 224, 0); }
+  50%      { fill: rgb(183, 222, 247); }
+  70%      { fill: rgb(204, 33, 28); }
+  90%     { fill: rgb(0, 139, 70); }
+  }
+
