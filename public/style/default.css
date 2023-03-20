@@ -9706,7 +9706,6 @@ html {
 
 body {
   width: 100%;
-  overflow: hidden;
   font-family: "Helvetica Neue Normal"; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
@@ -9760,13 +9759,19 @@ a {
 header {
   width: auto;
   font-family: 'Helvetica Neue Bolderx2';
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  height: 6vh !important; }
   header .nav-color {
-    color: #EE691C; }
+    color: #e63329; }
 
 .jajaja-nav {
   position: relative;
-  right: 13%; }
+  right: 13%;
+  top: 0.3vh; }
+
+.jajaja-svg-nav {
+  position: relative;
+  bottom: 0.8vh; }
 
 .jajaja-nav-hour-change {
   position: relative;
@@ -9782,7 +9787,7 @@ main {
   animation: wheelTxtColor 20s infinite; }
 
 .nav-item {
-  color: #EE691C !important; }
+  color: #e63329 !important; }
 
 .jajaja-close-section {
   position: relative;
@@ -9796,9 +9801,122 @@ main {
   position: relative;
   text-align: right;
   left: 12rem;
+  bottom: 1vh;
   font-size: 100%;
-  font-family: 'Helvetica Neue Bolderx3'; }
+  font-family: 'Helvetica Neue Bolderx3';
+  line-height: 100%; }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1; }
+
+#main-menu {
+  display: block;
+  height: 100px;
+  width: 100%;
+  background: #e63329;
+  margin: 0px;
+  z-index: 9; }
+
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9; }
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem; }
+
+#main-menu a {
+  color: #EE691C;
+  font-size: 1.5rem;
+  text-decoration: none; }
+
+#main-menu a:hover {
+  text-decoration: underline; }
+
+#hamburger-input {
+  display: none; }
+
+#hamburger-menu {
+  position: relative;
+  top: 2%;
+  width: 25px;
+  height: 25px;
+  display: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(to bottom, #e63329, #e63329 20%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%, #e63329 40%, #e63329 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, #e63329 80%, #e63329 100%); }
+
+#hamburger-menu #sidebar-menu {
+  visibilty: hidden;
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100vh;
+  background-color: #e63329;
+  -webkit-text-stroke: 1px #fff !important;
+  opacity: 1;
+  transition: 0.3s;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  z-index: 20000000000000000000000000000000; }
+
+#hamburger-menu h3, #hamburger-menu .h3 {
+  color: #EE691C;
+  font-size: 2.2rem;
+  -webkit-text-stroke: 1px #fff !important; }
+
+#hamburger-menu ul {
+  padding-left: 0px;
+  -webkit-text-stroke: 1px #fff !important; }
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+  -webkit-text-stroke: 1px #fff !important; }
+
+#hamburger-menu a {
+  color: #EE691C;
+  font-size: 1.3rem;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #fff !important; }
+
+#hamburger-menu a:hover {
+  text-decoration: underline; }
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  left: 0;
+  width: 40%; }
+
+#hamburger-input:checked ~ .overlay {
+  visibility: visible;
+  opacity: 1; }
+
+@media screen and (max-width: 1200px) {
+  #main-menu {
+    display: none; }
+
+  #hamburger-menu {
+    display: inline; } }
 .jajaja-section-1 {
   width: auto;
   height: 95vh;
@@ -9813,7 +9931,9 @@ main {
   .jajaja-section-1 .jajaja-icon-bottle {
     transform: rotate(90); }
   .jajaja-section-1 .jajaja-desktop-icons {
-    width: 30%; }
+    width: 30%;
+    position: relative;
+    left: 18rem; }
     .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons {
       display: flex;
       flex-direction: column;
@@ -9828,22 +9948,46 @@ main {
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-img {
           text-align: center;
           align-items: center;
-          height: 6vh;
-          width: 6rem; }
+          height: 12vh;
+          width: 12rem; }
           .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-img .jajaja-icon-img-container {
             margin: auto; }
             .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-img .jajaja-icon-img-container img {
               max-width: 100%;
-              max-height: 100%; }
+              max-height: 100%;
+              cursor: pointer; }
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-name {
           position: relative;
-          bottom: 2vh; }
+          bottom: 3vh;
+          cursor: pointer; }
           .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-name .jajaja-icon-name-text {
-            background-color: white;
+            background-color: #FEFEE2;
             margin: auto;
-            font-size: 60%;
+            font-size: 80%;
             color: black;
-            width: 4rem; }
+            width: 5rem;
+            font-family: "Helvetica Neue Bolderx2"; }
+
+#open-modal-all-recipe {
+  max-width: 80%;
+  max-height: 80%; }
+
+#jajaja-icon-cactus {
+  margin-top: 3vh;
+  margin-bottom: -1vh; }
+
+#jajaja-icon-bottle {
+  transform: rotate(90deg);
+  max-width: 60%;
+  max-height: 60%; }
+
+#jajaja-icon-1 {
+  position: relative;
+  top: 3vh; }
+
+#jajaja-icon-bottle-text {
+  position: relative;
+  top: 1vh; }
 
 .bg-1 {
   background-image: url("../../public/img/FONDS-COULEUR/bleu.jpg"); }
@@ -9865,6 +10009,9 @@ main {
 
 .bg-7 {
   background-image: url("../../public/img/KODAK/8.jpg"); }
+
+.bg-8 {
+  background-image: url("../../public/img/FONDS-COULEUR/Capture.png"); }
 
 .jajaja-section-2 {
   width: auto;
@@ -9895,22 +10042,32 @@ main {
   transform: translate(-50%, -50%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-align: center;
-  background-color: #fafbf8;
+  background-color: #fafbf7;
   position: absolute;
   display: none; }
   .jajaja-wrapper .jajaja-modal-header {
     cursor: grab;
-    height: 10vh; }
+    height: 6vh;
+    border-bottom: 3px solid black; }
+  .jajaja-wrapper .jajaja-header-close-btn {
+    position: relative;
+    left: 45%;
+    font-size: 140%;
+    bottom: 8%;
+    color: black !important; }
 
 .jajaja-header-btns {
-  width: 6rem;
+  width: 4rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+  position: relative;
+  top: 10px;
+  left: 6px; }
   .jajaja-header-btns .jajaja-header-circle {
     border: 2px solid black;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     color: black;
     box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.75);
@@ -9920,7 +10077,9 @@ main {
       vertical-align: middle;
       text-align: center; }
   .jajaja-header-btns .jajaja-header-circle:nth-child(1) {
-    background-color: #e63329; }
+    background-color: #e63329;
+    box-shadow: none;
+    border: none; }
 
 .wrapper {
   position: absolute;
@@ -9932,6 +10091,17 @@ main {
   z-index: 1;
   display: block;
   color: #e63329; }
+
+.wrapper-grabbed {
+  top: 43%;
+  left: 27%;
+  height: 70vh; }
+
+.wrapper-cover {
+  top: 45%;
+  left: 78%;
+  height: 70vh;
+  width: 25%; }
 
 .wrapper header {
   border-bottom: 1px solid black;
@@ -9973,15 +10143,16 @@ main {
   text-align: center; }
 
 .modal-recipe-wrapper {
-  width: 60%;
-  transform: translate(-50%, -50%);
-  top: 50%;
+  width: 50%;
+  top: 20%;
   left: 30%;
+  transform: translate(-20%, -20%);
   height: 80vh;
   z-index: 1;
   color: #e63329 !important; }
-  .modal-recipe-wrapper .jajaja-header-btns {
-    width: 10%; }
+  .modal-recipe-wrapper iframe {
+    width: 100%;
+    height: 67vh; }
   .modal-recipe-wrapper .question-mark-icon {
     position: relative;
     left: 45%;
@@ -9989,9 +10160,6 @@ main {
     cursor: pointer;
     text-decoration: none;
     color: #e63329; }
-  .modal-recipe-wrapper .modal-recipe-content iframe {
-    width: 100%;
-    height: 70vh; }
 
 .modal-social-wrapper {
   width: 30%;
@@ -10033,17 +10201,29 @@ main {
   width: 20%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-align: center;
-  background-color: #fafbf8;
+  background-color: #fafbf7;
   border-radius: 10px;
-  -webkit-text-stroke: 1px solid #fff; }
+  -webkit-text-stroke: 1px solid #fff;
+  font-family: 'JAJAJA'; }
   #popup header {
     height: 10vh;
-    border-bottom: 2px solid black; }
+    cursor: grab; }
   #popup .jajaja-header-btns {
-    width: 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
+
+.jajaja-popup-header {
+  height: 9vh;
+  border-bottom: 3px solid black;
+  margin-bottom: 2vh; }
+
+.jajaja-header-close-btn {
+  position: relative;
+  left: 45%;
+  font-size: 140%;
+  bottom: 8%;
+  color: black !important; }
 
 .modal-recipe-howto-wrapper {
   background-color: rgba(204, 33, 28, 0.99);
@@ -10090,22 +10270,17 @@ main {
     display: flex;
     flex-direction: row; }
     .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu {
-      width: 50%; }
-      .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu .jajaja-popup-icon {
-        background-image: url("../../public/img/PIXELS/ghettoblater1.png");
-        background-size: contain;
-        height: 15vh;
-        width: 9rem;
-        margin: auto; }
-      .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu .jajaja-popup-icon-name-text {
-        background: #ffe4c4;
-        width: 4rem;
-        padding: 4px 10px;
-        margin: auto;
-        font-size: 40%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      border: 1px black;
+      margin-bottom: 5%; }
+      .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu .jajaja-popup-icon img {
+        width: 20%; }
+      .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu .jajaja-popup-icon-name {
         position: relative;
-        bottom: 5vh;
-        text-align: center; }
+        top: 10%;
+        font-size: 100%; }
 
 .popup-background {
   display: none;
@@ -10113,13 +10288,11 @@ main {
   height: 50vh;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-align: center;
-  background-color: #fafbf8;
+  background-color: #fafbf7;
   border-radius: 10px;
   -webkit-text-stroke: 1px solid #fff;
   transform: translate(-40%, -50%);
   overflow-y: scroll; }
-  .popup-background .modal-bg-header .jajaja-header-btns {
-    width: 20%; }
   .popup-background h3, .popup-background .h3 {
     color: black !important; }
   .popup-background .popup-container {
@@ -10130,7 +10303,8 @@ main {
   width: 50%;
   height: 10vh;
   text-align: center;
-  border: 0.5px solid #fff; }
+  border: 0.5px solid #fff;
+  margin-bottom: 1vh; }
   .jajaja-background .jajaja-background-container {
     width: 100%;
     height: 10vh;
@@ -10150,6 +10324,8 @@ main {
     background-image: url("../../public/img/KODAK/27.jpg"); }
   .jajaja-background #jajaja-bg-7 {
     background-image: url("../../public/img/KODAK/8.jpg"); }
+  .jajaja-background #jajaja-bg-8 {
+    background-image: url("../../public/img/FONDS-COULEUR/Capture.png"); }
   .jajaja-background .jajaja-background-container:hover {
     border: 3px solid rgba(204, 33, 28, 0.7); }
 
@@ -10158,13 +10334,11 @@ main {
   height: 50vh;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   text-align: center;
-  background-color: #fafbf8;
+  background-color: #fafbf7;
   border-radius: 10px;
   -webkit-text-stroke: 1px solid #fff;
   transform: translate(40%, -50%);
   overflow-y: scroll; }
-  .popup-clock .modal-clock-header .jajaja-header-btns {
-    width: 20%; }
   .popup-clock h3, .popup-clock .h3 {
     color: black !important; }
   .popup-clock .popup-container {
@@ -10176,8 +10350,8 @@ main {
     border: 2px solid #e63329;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    color: #e63329 !important;
-    background-color: #fafbf8; }
+    color: #fafbf7 !important;
+    background-color: #e63329; }
   .popup-clock .jajaja-clock-container button:hover {
     transform: scale(1.1);
     color: #fafbf8 !important;
@@ -10349,7 +10523,7 @@ main {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
   .jajaja-wrapper {
-    width: 100%;
+    width: 90%;
     top: 50%;
     left: 50%;
     height: 85vh;
@@ -10375,6 +10549,10 @@ main {
 @media only screen and (max-width: 1200px) {
   .jajaja-section-1 {
     position: static; } }
+@media only screen and (min-width: 1200px) {
+  .jajaja-desktop-icons {
+    position: absolute;
+    right: -10rem; } }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */

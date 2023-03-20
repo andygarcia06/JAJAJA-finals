@@ -1,3 +1,7 @@
+// window.onload = function(){
+//     alert('the script is running')
+// };
+
 const wrapper = document.querySelector(".wrapper"),
 header = wrapper.querySelector("header");
 function onDrag({movementX, movementY}){
@@ -46,21 +50,6 @@ wrapper.addEventListener('click', ()=>{
 });
 
 
-// MODAL DATE
-
-const modalDateWrapper = document.querySelector('.modal-date-wrapper');
-const openModalDateWrapper = document.querySelector('.jajaja-modal-date-opener');
-const closeModalDateWrapper = document.querySelector('.close-date-btn');
-
-openModalDateWrapper.addEventListener("click", () => {
-    // modalDateWrapper.style.display = 'block';
-    alert('Hello')
-});
-
-closeModalDateWrapper.addEventListener('click',() =>{
-    modalDateWrapper.style.display = 'none';
-})
-
 // MODAL RECIPE
 const openModalRecipeBtn = document.querySelector('#open-modal-recipe')
 const closeModalRecipeBtn = document.querySelector('.modal-recipe-close-btn')
@@ -103,6 +92,7 @@ modalRecipeWrapper.addEventListener('click', ()=>{
     modalAllRecipeWrapper.style.zIndex = 'auto';
     modalMusicWrapper.style.zIndex = 'auto';
 });
+
 
 // MODAL ALLRECIPE
 
@@ -147,48 +137,177 @@ modalAllRecipeWrapper.addEventListener('click', ()=>{
     modalMusicWrapper.style.zIndex = 'auto';
 });
 
+// Change vue of popup
+const changeBackGround = document.querySelector('#jajaja-change-bg');
+const changeMusic = document.querySelector('#jajaja-change-music');
+const changeMenu = document.querySelector('#jajaja-change-howto');
+const popupContent = document.querySelector('.jajaja-popup-content');
+const popupBackground = document.querySelector('.popup-background');
+const modalBgWrapperCloser = document.querySelector('#modal-bg-close');
+const changeClock = document.querySelector('#jajaja-change-clock');
+const popupClock = document.querySelector('.popup-clock');
+const modalHourWrapperCloser = document.querySelector('#modal-popup-close');
+
+
+changeBackGround.addEventListener('click', () =>{
+    popupBackground.style.display = 'block'
+    popupClock.style.display = 'none'
+})
+
+modalBgWrapperCloser.addEventListener('click',() =>{
+    popupBackground.style.display = 'none'
+})
+
+
+
+changeClock.addEventListener('click', () =>{
+    popupClock.style.display = 'block';
+    popupBackground.style.display = 'none'
+})
+
+modalHourWrapperCloser.addEventListener('click',() =>{
+    popupClock.style.display = 'none'
+})
+
+
+// CHANGE BACKGROUND 
+
+const bg1 = document.querySelector('#jajaja-bg-1');
+const bg2 = document.querySelector('#jajaja-bg-2');
+const bg3 = document.querySelector('#jajaja-bg-3');
+const bg4 = document.querySelector('#jajaja-bg-4');
+const bg5 = document.querySelector('#jajaja-bg-5');
+const bg6 = document.querySelector('#jajaja-bg-6');
+const bg7 = document.querySelector('#jajaja-bg-7');
+const bg8 = document.querySelector('#jajaja-bg-8');
+const jajajaSection = document.querySelector('.jajaja-section-1')
+
+bg1.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-1');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+bg2.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-2');
+    jajajaSection.classList.remove('bg-1','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+bg3.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-3');
+    jajajaSection.classList.remove('bg-2','bg-1','bg-4','bg-5','bg-6','bg-7','bg-8');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg4.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-4');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-1','bg-5','bg-6','bg-7','bg-8');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.add('wrapper-cover');
+
+});
+
+bg5.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-5');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-1','bg-6','bg-7','bg-8');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+bg6.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-6');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1','bg-7','bg-8');
+    wrapper.classList.add('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+});
+
+bg7.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-7');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-1','bg-8');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+bg8.addEventListener('click',()=>{
+    jajajaSection.classList.add('bg-8');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-1','bg-7');
+    wrapper.classList.remove('wrapper-grabbed');
+    wrapper.classList.remove('wrapper-cover');
+
+
+});
+
+// MODAL DATE
+
+// const modalDateWrapper = document.querySelector('.modal-date-wrapper');
+// const openModalDateWrapper = document.querySelector('.jajaja-modal-date-opener');
+// const closeModalDateWrapper = document.querySelector('.close-date-btn');
+
+// openModalDateWrapper.addEventListener("click", () => {
+//     modalDateWrapper.style.display = 'block';
+//     alert('Hello')
+// });
+
+// closeModalDateWrapper.addEventListener('click',() =>{
+//     modalDateWrapper.style.display = 'none';
+// })
+
 // MODAL SOCIAL
 
-const openModalSocialBtn = document.querySelector('#open-modal-social')
-const closeModalSocialBtn = document.querySelector('.modal-social-close-btn')
-const modalSocialWrapper = document.querySelector(".modal-social-wrapper"),
-ModalSocialHeader = modalSocialWrapper.querySelector(".modal-social-header");
-function onDrag3({movementX, movementY}){
-  let getModalSocialStyle = window.getComputedStyle(modalSocialWrapper);
-  let leftModalSocialVal = parseInt(getModalSocialStyle.left);
-  let topModalSocialVal = parseInt(getModalSocialStyle.top);
-  modalSocialWrapper.style.left = `${leftModalSocialVal + movementX}px`;
-  modalSocialWrapper.style.top = `${topModalSocialVal + movementY}px`;
-}
-ModalSocialHeader.addEventListener("mousedown", ()=>{
-    ModalSocialHeader.classList.add("active");
-    ModalSocialHeader.addEventListener("mousemove", onDrag3);
-});
-document.addEventListener("mouseup", ()=>{
-    ModalSocialHeader.classList.remove("active");
-    ModalSocialHeader.removeEventListener("mousemove", onDrag3);
-});
+// const openModalSocialBtn = document.querySelector('#open-modal-social')
+// const closeModalSocialBtn = document.querySelector('.modal-social-close-btn')
+// const modalSocialWrapper = document.querySelector(".modal-social-wrapper"),
+// ModalSocialHeader = modalSocialWrapper.querySelector(".modal-social-header");
+// function onDrag3({movementX, movementY}){
+//   let getModalSocialStyle = window.getComputedStyle(modalSocialWrapper);
+//   let leftModalSocialVal = parseInt(getModalSocialStyle.left);
+//   let topModalSocialVal = parseInt(getModalSocialStyle.top);
+//   modalSocialWrapper.style.left = `${leftModalSocialVal + movementX}px`;
+//   modalSocialWrapper.style.top = `${topModalSocialVal + movementY}px`;
+// }
+// ModalSocialHeader.addEventListener("mousedown", ()=>{
+//     ModalSocialHeader.classList.add("active");
+//     ModalSocialHeader.addEventListener("mousemove", onDrag3);
+// });
+// document.addEventListener("mouseup", ()=>{
+//     ModalSocialHeader.classList.remove("active");
+//     ModalSocialHeader.removeEventListener("mousemove", onDrag3);
+// });
 
-function openSocialModal() {
-    modalSocialWrapper.style.zIndex = 1000000001;
-    modalSocialWrapper.style.display = 'block';
-};
+// function openSocialModal() {
+//     modalSocialWrapper.style.zIndex = 1000000001;
+//     modalSocialWrapper.style.display = 'block';
+// };
 
-function closeSocialModal() {
-    modalSocialWrapper.style.display = 'none';
-};
+// function closeSocialModal() {
+//     modalSocialWrapper.style.display = 'none';
+// };
 
-openModalSocialBtn.addEventListener('click', openSocialModal);
-closeModalSocialBtn.addEventListener('click',closeSocialModal);
+// openModalSocialBtn.addEventListener('click', openSocialModal);
+// closeModalSocialBtn.addEventListener('click',closeSocialModal);
 
-modalSocialWrapper.addEventListener('click', ()=>{
-    modalSocialWrapper.style.zIndex = 1000000001;
-    modalSocialWrapper.style.position = 'absolute';
-    wrapper.style.zIndex = 'auto';
-    modalRecipeWrapper.style.zIndex = 'auto';
-    modalAllRecipeWrapper.style.zIndex = 'auto';
-    modalMusicWrapper.style.zIndex = 'auto';
-});
+// modalSocialWrapper.addEventListener('click', ()=>{
+//     modalSocialWrapper.style.zIndex = 1000000001;
+//     modalSocialWrapper.style.position = 'absolute';
+//     wrapper.style.zIndex = 'auto';
+//     modalRecipeWrapper.style.zIndex = 'auto';
+//     modalAllRecipeWrapper.style.zIndex = 'auto';
+//     modalMusicWrapper.style.zIndex = 'auto';
+// });
 
 // MODAL PACMAN
 
@@ -241,45 +360,45 @@ closeModalPacmanBtn.addEventListener('click',closeSocialModal);
 
 // MODAL MUSIC
 
-const openModalMusicBtn = document.querySelector('#open-modal-music')
-const closeModalMusic = document.querySelector('.modal-music-close-btn')
-const modalMusicWrapper = document.querySelector(".modal-music-wrapper"),
-ModalMusicHeader = modalMusicWrapper.querySelector(".modal-music-header");
-function onDrag5({movementX, movementY}){
-  let getModalMusicStyle = window.getComputedStyle(modalMusicWrapper);
-  let leftModalMusicVal = parseInt(getModalMusicStyle.left);
-  let topModalMusicVal = parseInt(getModalMusicStyle.top);
-  modalMusicWrapper.style.left = `${leftModalMusicVal + movementX}px`;
-  modalMusicWrapper.style.top = `${topModalMusicVal + movementY}px`;
-}
-ModalMusicHeader.addEventListener("mousedown", ()=>{
-    ModalMusicHeader.classList.add("active");
-    ModalMusicHeader.addEventListener("mousemove", onDrag5);
-});
-document.addEventListener("mouseup", ()=>{
-    ModalMusicHeader.classList.remove("active");
-    ModalMusicHeader.removeEventListener("mousemove", onDrag5);
-});
+// const openModalMusicBtn = document.querySelector('#open-modal-music')
+// const closeModalMusic = document.querySelector('.modal-music-close-btn')
+// const modalMusicWrapper = document.querySelector(".modal-music-wrapper"),
+// ModalMusicHeader = modalMusicWrapper.querySelector(".modal-music-header");
+// function onDrag5({movementX, movementY}){
+//   let getModalMusicStyle = window.getComputedStyle(modalMusicWrapper);
+//   let leftModalMusicVal = parseInt(getModalMusicStyle.left);
+//   let topModalMusicVal = parseInt(getModalMusicStyle.top);
+//   modalMusicWrapper.style.left = `${leftModalMusicVal + movementX}px`;
+//   modalMusicWrapper.style.top = `${topModalMusicVal + movementY}px`;
+// }
+// ModalMusicHeader.addEventListener("mousedown", ()=>{
+//     ModalMusicHeader.classList.add("active");
+//     ModalMusicHeader.addEventListener("mousemove", onDrag5);
+// });
+// document.addEventListener("mouseup", ()=>{
+//     ModalMusicHeader.classList.remove("active");
+//     ModalMusicHeader.removeEventListener("mousemove", onDrag5);
+// });
 
-function openMusicModal() {
-    modalMusicWrapper.style.display = 'block';
-};
+// function openMusicModal() {
+//     modalMusicWrapper.style.display = 'block';
+// };
 
-function closeMusicModal() {
-    modalMusicWrapper.style.display = 'none';
-};
+// function closeMusicModal() {
+//     modalMusicWrapper.style.display = 'none';
+// };
 
-openModalMusicBtn.addEventListener('click', openMusicModal);
-closeModalMusic.addEventListener('click',closeMusicModal);
+// openModalMusicBtn.addEventListener('click', openMusicModal);
+// closeModalMusic.addEventListener('click',closeMusicModal);
 
-modalMusicWrapper.addEventListener('click', ()=>{
-    modalMusicWrapper.style.zIndex = 1000;
-    modalMusicWrapper.style.position = 'absolute';
-    wrapper.style.zIndex = 'auto';
-    modalRecipeWrapper.style.zIndex = 'auto';
-    modalAllRecipeWrapper.style.zIndex = 'auto';
-    modalSocialWrapper.style.zIndex = 'auto';
-});
+// modalMusicWrapper.addEventListener('click', ()=>{
+//     modalMusicWrapper.style.zIndex = 1000;
+//     modalMusicWrapper.style.position = 'absolute';
+//     wrapper.style.zIndex = 'auto';
+//     modalRecipeWrapper.style.zIndex = 'auto';
+//     modalAllRecipeWrapper.style.zIndex = 'auto';
+//     modalSocialWrapper.style.zIndex = 'auto';
+// });
 
 
 

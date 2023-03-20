@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/style/default.css">
+    <link rel="stylesheet" href="../style/recipe.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -12,38 +12,33 @@
 
     <title>Document</title>
 </head>
-<body class="jajaja-recipe-body">
+<body>
 
   <!-- Slider main container -->
-<div class="swiper">
+<div class="swiper" id="recipe-2">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide" id="slide-1">
       <div class="recipe">
         <div class="recipe-body">
-          <video id="background-video" preload="auto" controls >
-            <source src="./public/video/recette 2 téléphone ( demande de validation ).mp4" type="video/mp4">
+          <video id="background-video" preload="auto" controls>
+            <source src="../videos/TINGA DE POLLO.mp4" type="video/mp4">
           </video>
-          <div class="jajaja-recipe-video-txt">
-            <h1>CHILAQUILES VERDES</h1>
-            <div class="swiper-button-next">
+            <div class="jajaja-recipe-video-txt">
+              <h1 style="display: none;">TINGA DE POLLO</h1>
+              <div class="swiper-button-next">
+              </div>
             </div>
-            <div class="jajaja-recipe-video-txt-rest">
-
-            </div>
-          </div>
-        </div>
         </div>
       </div>
+    </div>
     <div class="swiper-slide" id="slide-2">
         <div class="jajaja-recipe jajaja-container container">
           <div class="jajaja-recipe-txt">
             <div class="jajaja-recipe-info">
               <div class="jajaja-recipe-title">
-                <h2>CHILAQUILES VERDE</h2>
-                <div class="swiper-button-prev">
-                </div>
+                <h2>TINGA DE POLLO</h2>
               </div>
               <div class="jajaja-recipe-info-icons" data-jajaja-grid>
                 <div class="jajaja-recipe-time jajaja-recipe-info-icon">
@@ -60,7 +55,7 @@
                     "fi fi-rr-clock"
                     ></i></span>
                   <h5 class="jajaja-text-500 jajaja-margin-small-top jajaja-margin-remove-bottom">Temps total</h5>
-                  <span class="jajaja-text-small">50 mins</span>
+                  <span class="jajaja-text-small">25 mins</span>
                 </div>
                 <div class="jajaja-recipe-people jajaja-recipe-info-icon border-left">
                   <span><i
@@ -68,7 +63,7 @@
                     "fi fi-rr-users"
                     ></i></span>
                   <h5 class="jajaja-text-500 jajaja-margin-small-top jajaja-margin-remove-bottom">Pour :</h5>
-                  <span class="jajaja-text-small"> 4 pers.</span>
+                  <span class="jajaja-text-small"> 3 pers.</span>
                 </div>
               </div>
               <hr>
@@ -136,12 +131,13 @@
                   <h3 class="">Ingredients</h3>
                   <ul class="jajaja-list jajaja-list-large jajaja-list-divider jajaja-margin-medium-top">
                     <li>12 tortillas de maïs bleu</li>
-                    <li>3 cuisses de poulet</li>
-                    <li>5 tomates</li>
-                    <li>2 oignons jaune</li>
-                    <li>1 pot de salsa roja</li>
-                    <li>1 botte de persil</li>
-                    <li>Pickles d’oignon rouge</li>
+                    <li>400g d'échine de porc</li>
+                    <li>1L de jus d'ananas</li>
+                    <li>1 sachet d'épice TINGA DE POLLO</li>
+                    <li>4 tranches d'Ananas</li>
+                    <li>1 pot de Salsa Verde</li>
+                    <li>1 oignon jaune</li>
+                    <li>1 citron vert</li>
                   </ul>
               </div>
               <h3 class="jajaja-margin-top jajaja-title-centered ">Tags</h3>
@@ -167,17 +163,16 @@
       </div>
     </div>
   </div>
-  </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
 
   <!-- If we need navigation buttons -->
   <!-- <div class="swiper-button-prev"></div>
- -->
+  <div class="swiper-button-next"></div> -->
 </div>
 
 
-  <script src="./public/js/swiper.js"></script>
-  <script src="./public/js/scrolling.js"></script>
+  <script src="../../public/js/swiper.js"></script>
+  <script src="./js/scrolling7.js"></script>
 </body>
 </html>

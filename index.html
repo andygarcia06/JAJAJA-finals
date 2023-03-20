@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/style/default.css">
     <title>Document</title>
 
+
     <!-- FLATICONS -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
@@ -25,8 +26,8 @@
         <header class="" id="jajaja-header">
             <nav class="navbar navbar-expand-lg nav-color">
                 <div class="container-fluid">
-                <a class="navbar-brand open-modal-btn text-danger" href="#">
-                    <svg class="jajaja-svg-nav" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb(238, 105, 28);">
+                <a class="navbar-brand open-modal-btn text-primary" href="#">
+                    <svg class="jajaja-svg-nav" viewBox="0 0 278 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: rgb( 230 ,  51 , 42)">
                         <path d="M42.2 1.19995V73.2C42.2 84.9 32.7 94.3 21.1 94.3C16.9 94.3 12.9 93.1 9.6 90.9C3.8 87.2 0 80.6 0 73.2V28.7H19.3C19.3 28.7 19.3 60.4 19.3 73.2C19.3 74.2 20.1 75 21.1 75C22.1 75 22.9 74.2 22.9 73.2V1.19995H42.2V1.19995Z"></path>
                         <path d="M133.9 1.19995V73.2C133.9 84.9 124.4 94.3 112.8 94.3C108.6 94.3 104.6 93.1 101.3 90.9C95.5001 87.1 91.6001 80.6 91.6001 73.2V28.7H111C111 28.7 111 60.4 111 73.2C111 74.2 111.8 75 112.8 75C113.8 75 114.6 74.2 114.6 73.2V1.19995H133.9V1.19995Z"></path>
                         <path d="M225.7 1.19995V73.2C225.7 84.9 216.2 94.3 204.6 94.3C200.4 94.3 196.4 93.1 193.1 90.9C187.3 87.1 183.4 80.6 183.4 73.2V28.7H202.7V73.2C202.7 74.2 203.5 75 204.5 75C205.5 75 206.3 74.2 206.3 73.2V1.19995H225.7V1.19995Z"></path>
@@ -36,38 +37,63 @@
                         <path d="M271.6 3.3C271.6 1.4 273 0 274.8 0C276.6 0 278 1.4 278 3.3C278 5.2 276.6 6.6 274.8 6.6C273 6.6 271.6 5.2 271.6 3.3ZM277.6 3.3C277.6 1.6 276.4 0.3 274.8 0.3C273.2 0.3 272 1.6 272 3.3C272 5 273.2 6.3 274.8 6.3C276.4 6.3 277.6 5 277.6 3.3ZM273 3.3C273 2.1 273.7 1.2 274.8 1.2C275.7 1.2 276.2 1.7 276.4 2.5H275.9C275.8 2 275.5 1.7 274.9 1.7C274 1.7 273.6 2.4 273.6 3.3C273.6 4.2 274.1 4.9 274.9 4.9C275.6 4.9 275.9 4.5 276 3.9H276.5C276.5 4.3 276.3 4.6 276.1 4.9C275.8 5.2 275.4 5.4 274.9 5.4C273.7 5.3 273 4.5 273 3.3Z"></path>
                     </svg>
                 </a>
-                <button class="navbar-toggler text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <input type="checkbox" id="hamburger-input" class="burger-shower" />
+                <label id="hamburger-menu" for="hamburger-input">
+                <nav id="sidebar-menu">
+                    <h3>JAJAJA</h3>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="jajaja-nav-hour" class="nav-link text-primary">Hour<span></a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="jajaja-nav-hour-change"><i class="fi fi-rr-caret-down"></i></a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="" class="nav-link text-primary jajaja-mute">Volume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fullscreen-btn text-primary">Fullscreen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="to-next-section nav-link text-primary"  href="#jajaja-section-2" id="jajaja-bio">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fullscreen-btn text-primary"  href="#jajaja-section-2">Contact</a>
+                        </li>
+                        </ul>
+                </nav>
+                </label>
+
+                <div class="overlay"></div>
                 <div class="collapse navbar-collapse jajaja-nav" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item ">
-                        <a id="jajaja-nav-hour" class="nav-link text-danger">Hour<span></a>
+                        <a id="jajaja-nav-hour" class="nav-link text-primary">Hour<span></a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="jajaja-nav-hour-change"><i class="fi fi-rr-caret-down"></i></a>
                     </li> -->
                     <li class="nav-item">
-                        <a href="" class="nav-link text-danger jajaja-modal-date-opener">Insta</a>
+                        <p href="" class="nav-link text-primary jajaja-mute">Volume</p>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link text-danger">Volume</a>
+                        <a class="nav-link fullscreen-btn  text-primary">Fullscreen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fullscreen-btn  text-danger">Fullscreen</a>
+                        <a class="to-next-section nav-link fullscreen-btn text-primary"  href="#jajaja-section-2">Bio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="to-next-section nav-link fullscreen-btn text-danger"  href="#jajaja-section-2">Bio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fullscreen-btn text-danger"  href="#jajaja-section-2">Contact</a>
+                        <a class="nav-link fullscreen-btn text-primary"  href="#jajaja-section-2">Contact</a>
                     </li>
                     </ul>
                     <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success text-danger jajaja-search" type="submit">Rechercher <br> Buscar</button>
+                    <button class="btn btn-outline-success text-primary jajaja-search" type="submit">Rechercher <br> Buscar</button>
                     </form>
                 </div>
                 </div>
@@ -84,6 +110,7 @@
                                 <span class="jajaja-header-circle"></span>
                                 <span class="jajaja-header-circle"></span>
                             </div>
+                            <div class="jajaja-header-close-btn">&times;</div>
                         </header>
                         <div class="content">
                         <div class="icon">                   
@@ -103,26 +130,26 @@
                 </section>
                 <section class="jajaja-desktop-icons">
                     <div class="jajaja-icons">
-                        <div class="jajaja-icon">
+                        <div class="jajaja-icon" id="jajaja-icon-1">
                             <div class="jajaja-icon-img">
                                 <div class="jajaja-icon-img-container">
-                                    <img class="jajaja-dektop-icon jajaja-icon-bottle" src="./public/img/PIXELS/sauce1.png" alt="Tacos">
-                                    <div class="jajaja-icon-name"><p class="jajaja-icon-name-text">A LA UNE</p></div>
+                                    <img class="jajaja-dektop-icon" id="jajaja-icon-bottle" src="./public/img/PIXELS/sauce1.png" alt="Sauce">
+                                    <div class="jajaja-icon-name" id="jajaja-icon-bottle-text"><p class="jajaja-icon-name-text">A LA UNE</p></div>
                                 </div>
                             </div>
                         </div>
                         <div class="jajaja-icon">
-                            <div class="jajaja-icon-img">
-                                <div class="jajaja-icon-img-container">
-                                    <img class="jajaja-dektop-icon" id="open-modal-recipe" src="./public/img/PIXELS/tacos.png" alt="Tacos">
+                            <div class="jajaja-icon-img" >
+                                <div class="jajaja-icon-img-container" id="open-modal-recipe">
+                                    <img  class="jajaja-dektop-icon" src="./public/img/PIXELS/tacos.png" alt="Tacos">
                                     <div class="jajaja-icon-name"><p class="jajaja-icon-name-text">RECETTES</p></div>
                                 </div>
                             </div>
                         </div>
                         <div class="jajaja-icon">
-                            <div class="jajaja-icon-img">
+                            <div class="jajaja-icon-img" id="jajaja-icon-cactus">
                                 <div class="jajaja-icon-img-container">
-                                    <img class="jajaja-dektop-icon jajaja-icon-cactus"   id="open-modal-all-recip" src="./public/img/PIXELS/cactus1.png" alt="Cactus">
+                                    <img class="jajaja-dektop-icon"   id="open-modal-all-recipe" src="./public/img/PIXELS/cactus1.png" alt="Cactus">
                                     <div class="jajaja-icon-name"><p class="jajaja-icon-name-text">TAQUERIA</p></div>
                                 </div>
                             </div>
@@ -186,7 +213,7 @@
                     </div>
                 </header>
                 <div class="modal-recipe-content  jajaja-modal-content">
-                <iframe src="./recipe.html" frameborder="0"></iframe>
+                <iframe src="././public/recipes/alpastore.html" frameborder="0"></iframe>
                 </div>
 
             <div class="modal-recipe-howto-wrapper">
@@ -361,28 +388,31 @@
     </section>
 
     <div id="popup">
-        <header>
+        <header class="jajaja-popup-header">
             <div class="jajaja-header-btns">
                 <span class="jajaja-header-circle close-btn" id="right-click-close-btn"></span>
                 <span class="jajaja-header-circle"></span>
                 <span class="jajaja-header-circle"></span>
             </div>
-            <div><h2>Custom ton JAJAJA</h2></div>
+            <div class="jajaja-header-close-btn">&times;</div>
         </header>
         <div class="jajaja-popup-iframe">
             <section class="jajaja-popup-content">
+                <div><h2>Custom ton JAJAJA</h2></div>
                 <div class="row jajaja-popup-row">
                     <div class="jajaja-popup-menu" id="jajaja-change-clock">
                         <div class="jajaja-popup-icon">
+                            <img src="./public/img/PIXELS/clock.png" alt="" srcset="">
                         </div>
-                        <div class="jajaja-popup-icon-name">
+                        <div class="jajaja-popup-icon-name"id="jajaja-popup-clock">
                             <p class="jajaja-popup-icon-name-text">HOUR</p>
                         </div>
                     </div>
                     <div class="jajaja-popup-menu" id="jajaja-change-bg">
                         <div class="jajaja-popup-icon">
+                            <img src="./public/img/PIXELS/crayon.png" alt="" srcset="">
                         </div>
-                        <div class="jajaja-popup-icon-name">
+                        <div class="jajaja-popup-icon-name" id="jajaja-popup-pen">
                             <p class="jajaja-popup-icon-name-text">BACKGROUND</p>
                         </div>
                     </div>
@@ -390,15 +420,17 @@
                 <div class="row jajaja-popup-row"id='jajaja-change-howto'>
                     <div class="jajaja-popup-menu">
                         <div class="jajaja-popup-icon">
+                            <img src="./public/img/PIXELS/ecrou.png" alt="" srcset="">
                         </div>
-                        <div class="jajaja-popup-icon-name">
+                        <div class="jajaja-popup-icon-name" id="jajaja-popup-param">
                             <p class="jajaja-popup-icon-name-text">HOW TO</p>
                         </div>
                     </div>
                     <div class="jajaja-popup-menu" id="jajaja-change-music">
                         <div class="jajaja-popup-icon">
+                            <img id="jajaja-gettoblaster" src="./public/img/PIXELS/ghettoblaster-big-png.png" alt="" srcset="">
                         </div>
-                        <div class="jajaja-popup-icon-name">
+                        <div class="jajaja-popup-icon-name" id="jajaja-popup-music">
                             <p class="jajaja-popup-icon-name-text">PLAYLIST</p>
                         </div>
                     </div>
@@ -406,15 +438,16 @@
             </section>
 
             <div class="popup-background">
-                <header class="modal-bg-header jajaja-modal-header">
+                <header class="modal-bg-header jajaja-popup-header">
                     <div class="jajaja-header-btns">
                         <span class="jajaja-header-circle" id="modal-bg-close"></span>
                         <span class="jajaja-header-circle"></span>
                         <span class="jajaja-header-circle"></span>
                     </div>
-                    <div><h3>Background</h3></div>
+                    <div class="jajaja-header-close-btn">&times;</div>
                 </header>
                 <div class="popup-container">
+                    <div><h3>Background</h3></div>
                     <div class="row">
                         <div class="jajaja-background">
                             <div class="jajaja-background-container" id="jajaja-bg-1">
@@ -460,15 +493,17 @@
                 <div class="jajaja-popup-menu"></div>
             </div>
             <div class="popup-clock">
-                <header class="modal-popup-header jajaja-modal-header">
+                <header class="modal-popup-header jajaja-popup-header">
                     <div class="jajaja-header-btns">
                         <span class="jajaja-header-circle" id="modal-popup-close"></span>
                         <span class="jajaja-header-circle"></span>
                         <span class="jajaja-header-circle"></span>
                     </div>
-                    <div><h3>CLock</h3></div>
+                    <div class="jajaja-header-close-btn">&times;</div>
+
                 </header>
                 <div class="popup-container">
+                    <div><h3>CLock</h3></div>
                     <div class="row">
                         <div class="jajaja-clock">
                             <div class="jajaja-clock-container">
@@ -499,18 +534,13 @@
         <div class="jajaja-popup-iframe">
             <iframe src="./public/pacman/pacman.html" frameborder="0"></iframe>
         </div>
-    </div>
+    </div>    
 
-
-    
-    <script src="./public/js/popup.js"></script>
-    <script src="./public/js/modal.js"></script>
-    <script src="./public/js/colors.js"></script>
-    <script src="./public/js/nav.js"></script>
-    <script src="./public/js/app.js"></script>
-    <script src="./public/js/caroussel.js"></script>
-    
-
-
+    <script type="text/javascript" src="./public/js/modal.js" async></script>
+    <script type="text/javascript"  src="./public/js/app.js" async></script>
+    <script type="text/javascript"  src="./public/js/popup.js" async></script>
+    <script type="text/javascript" src="./public/js/colors.js" async></script>
+    <script type="text/javascript" src="./public/js/nav.js" async></script>
+    <script type="text/javascript" src="./public/js/caroussel.js" async></script>
 </body>
 </html>
