@@ -24,6 +24,7 @@ document.addEventListener("mouseup", ()=>{
 // MODAL
 
 let closeModalBtn = document.querySelector('.close-btn');
+let closeModalBtn2 = document.querySelector('.close-btn-2');
 let openModalBtn = document.querySelector('.open-modal-btn');
 let modal = document.querySelector('.wrapper');
 
@@ -38,6 +39,7 @@ function closeModal() {
 
 openModalBtn.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click',closeModal);
+closeModalBtn2.addEventListener('click',closeModal);
 
 
 wrapper.addEventListener('click', ()=>{
@@ -50,48 +52,7 @@ wrapper.addEventListener('click', ()=>{
 });
 
 
-// MODAL RECIPE
-const openModalRecipeBtn = document.querySelector('#open-modal-recipe')
-const closeModalRecipeBtn = document.querySelector('.modal-recipe-close-btn')
-const modalRecipeWrapper = document.querySelector(".modal-recipe-wrapper"),
-ModalRecipeHeader = modalRecipeWrapper.querySelector(".modal-recipe-header");
-function onDrag2({movementX, movementY}){
-  let getModalRecipeStyle = window.getComputedStyle(modalRecipeWrapper);
-  let leftModalRecipeVal = parseInt(getModalRecipeStyle.left);
-  let topModalRecipeVal = parseInt(getModalRecipeStyle.top);
-  modalRecipeWrapper.style.left = `${leftModalRecipeVal + movementX}px`;
-  modalRecipeWrapper.style.top = `${topModalRecipeVal + movementY}px`;
-}
-ModalRecipeHeader.addEventListener("mousedown", ()=>{
-    ModalRecipeHeader.classList.add("active");
-    ModalRecipeHeader.addEventListener("mousemove", onDrag2);
-});
-document.addEventListener("mouseup", ()=>{
-    ModalRecipeHeader.classList.remove("active");
-    ModalRecipeHeader.removeEventListener("mousemove", onDrag2);
-});
 
-function openRecipeModal() {
-    modalRecipeWrapper.style.zIndex = '1200000'
-    modalRecipeWrapper.style.display = 'block';
-};
-
-function closeRecipeModal() {
-    modalRecipeWrapper.style.display = 'none';
-};
-
-openModalRecipeBtn.addEventListener('click', openRecipeModal);
-closeModalRecipeBtn.addEventListener('click',closeRecipeModal);
-
-
-modalRecipeWrapper.addEventListener('click', ()=>{
-    modalRecipeWrapper.style.zIndex = 1000;
-    modalRecipeWrapper.style.position = 'absolute';
-    wrapper.style.zIndex = 'auto';
-    modalSocialWrapper.style.zIndex = 'auto';
-    modalAllRecipeWrapper.style.zIndex = 'auto';
-    modalMusicWrapper.style.zIndex = 'auto';
-});
 
 
 // MODAL ALLRECIPE
@@ -178,13 +139,11 @@ const bg3 = document.querySelector('#jajaja-bg-3');
 const bg4 = document.querySelector('#jajaja-bg-4');
 const bg5 = document.querySelector('#jajaja-bg-5');
 const bg6 = document.querySelector('#jajaja-bg-6');
-const bg7 = document.querySelector('#jajaja-bg-7');
-const bg8 = document.querySelector('#jajaja-bg-8');
 const jajajaSection = document.querySelector('.jajaja-section-1')
 
 bg1.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-1');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
@@ -193,7 +152,7 @@ bg1.addEventListener('click',()=>{
 
 bg2.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-2');
-    jajajaSection.classList.remove('bg-1','bg-3','bg-4','bg-5','bg-6','bg-7','bg-8');
+    jajajaSection.classList.remove('bg-1','bg-3','bg-4','bg-5','bg-6');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
@@ -202,7 +161,7 @@ bg2.addEventListener('click',()=>{
 
 bg3.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-3');
-    jajajaSection.classList.remove('bg-2','bg-1','bg-4','bg-5','bg-6','bg-7','bg-8');
+    jajajaSection.classList.remove('bg-2','bg-1','bg-4','bg-5','bg-6');
     wrapper.classList.remove('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
 
@@ -210,44 +169,26 @@ bg3.addEventListener('click',()=>{
 
 bg4.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-4');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-1','bg-5','bg-6','bg-7','bg-8');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-1','bg-5','bg-6');
     wrapper.classList.remove('wrapper-grabbed');
-    wrapper.classList.add('wrapper-cover');
+    wrapper.classList.remove('wrapper-cover');
 
 });
 
 bg5.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-5');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-1','bg-6','bg-7','bg-8');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-1','bg-6');
     wrapper.classList.remove('wrapper-grabbed');
-    wrapper.classList.remove('wrapper-cover');
+    wrapper.classList.add('wrapper-cover');
 
 
 });
 
 bg6.addEventListener('click',()=>{
     jajajaSection.classList.add('bg-6');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1','bg-7','bg-8');
+    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-1');
     wrapper.classList.add('wrapper-grabbed');
     wrapper.classList.remove('wrapper-cover');
-
-});
-
-bg7.addEventListener('click',()=>{
-    jajajaSection.classList.add('bg-7');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-1','bg-8');
-    wrapper.classList.remove('wrapper-grabbed');
-    wrapper.classList.remove('wrapper-cover');
-
-
-});
-
-bg8.addEventListener('click',()=>{
-    jajajaSection.classList.add('bg-8');
-    jajajaSection.classList.remove('bg-2','bg-3','bg-4','bg-5','bg-6','bg-1','bg-7');
-    wrapper.classList.remove('wrapper-grabbed');
-    wrapper.classList.remove('wrapper-cover');
-
 
 });
 
@@ -427,6 +368,11 @@ openHIWModal.addEventListener("click", () => {
 closeHIWModal.addEventListener('click',() =>{
     hIWModal.style.display = 'none';
 })
+
+
+
+
+
 
 
 

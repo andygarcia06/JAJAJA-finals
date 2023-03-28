@@ -20,6 +20,15 @@ document.addEventListener("mouseup", ()=>{
   head.removeEventListener("mousemove", popupOnDrag);
 });
 
+const closePopup2 = document.querySelector('.close-popup-2');
+
+closePopup2.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+})
+
+
+
+
 
 
 

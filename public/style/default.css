@@ -9706,7 +9706,7 @@ html {
 
 body {
   width: 100%;
-  font-family: "Helvetica Neue Normal"; }
+  overflow: hidden; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: 'JAJAJA'; }
@@ -9714,18 +9714,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 a {
   animation: wheelTxtColor 20s infinite; }
 
-.jajaja-fts-10 {
-  font-size: 700%; }
-
-.jajaja-fts-5 {
-  font-size: 500%; }
-
 .jajaja-pixel-model {
   width: 50%;
   height: 50%; }
-
-.jajaja-fts-2 {
-  font-size: 200%; }
 
 .jajaja-no-overflow {
   overflow: hidden; }
@@ -9760,18 +9751,24 @@ header {
   width: auto;
   font-family: 'Helvetica Neue Bolderx2';
   text-transform: uppercase;
-  height: 6vh !important; }
+  height: 6vh !important;
+  background-color: #fff !important; }
   header .nav-color {
     color: #e63329; }
 
 .jajaja-nav {
   position: relative;
   right: 13%;
-  top: 0.3vh; }
+  bottom: 0.5vh; }
+
+#jajaja-nav-hour {
+  font-size: 200%;
+  position: relative;
+  left: 13rem; }
 
 .jajaja-svg-nav {
   position: relative;
-  bottom: 0.8vh; }
+  bottom: 0.5vh; }
 
 .jajaja-nav-hour-change {
   position: relative;
@@ -9787,14 +9784,20 @@ main {
   animation: wheelTxtColor 20s infinite; }
 
 .nav-item {
-  color: #e63329 !important; }
+  color: #e63329 !important;
+  cursor: pointer; }
+
+.jajaja-nav-icon img {
+  max-width: 20%;
+  max-height: 20%; }
 
 .jajaja-close-section {
   position: relative;
-  left: 96%;
-  font-size: 200%;
-  animation: wheelTextColor 20s infinite;
-  text-decoration: none; }
+  left: 95%;
+  top: 10vh;
+  font-size: 250%;
+  text-decoration: none;
+  color: black; }
 
 .jajaja-search {
   text-transform: uppercase;
@@ -9923,28 +9926,26 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-image: url("../../public/img/KODAK/21.jpg");
+  background-image: url("../../public/img/KODAK/8.jpg");
   background-size: cover; }
   .jajaja-section-1 .jajaja-main-modal-container {
     width: 70%;
     height: 100vh; }
-  .jajaja-section-1 .jajaja-icon-bottle {
+  .jajaja-section-1 #jajaja-icon-bottle {
     transform: rotate(90); }
   .jajaja-section-1 .jajaja-desktop-icons {
-    width: 30%;
-    position: relative;
-    left: 18rem; }
+    height: 95vh; }
     .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons {
       display: flex;
       flex-direction: column;
-      width: 80%; }
+      position: relative;
+      right: 2rem; }
       .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon {
-        width: 50%;
         margin: auto;
-        height: 15vh;
         display: flex;
         flex-direction: column;
-        text-align: center; }
+        text-align: center;
+        margin-bottom: 4vh; }
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-img {
           text-align: center;
           align-items: center;
@@ -9953,89 +9954,98 @@ main {
           .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-img .jajaja-icon-img-container {
             margin: auto; }
             .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-img .jajaja-icon-img-container img {
-              max-width: 100%;
-              max-height: 100%;
+              max-width: 40%;
+              max-height: 40%;
               cursor: pointer; }
         .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-name {
-          position: relative;
-          bottom: 3vh;
+          color: black !important;
+          font-family: "Helvetica Neue Bolderx2";
+          margin: auto;
           cursor: pointer; }
-          .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-name .jajaja-icon-name-text {
-            background-color: #FEFEE2;
-            margin: auto;
-            font-size: 80%;
-            color: black;
-            width: 5rem;
-            font-family: "Helvetica Neue Bolderx2"; }
-
-#open-modal-all-recipe {
-  max-width: 80%;
-  max-height: 80%; }
-
-#jajaja-icon-cactus {
-  margin-top: 3vh;
-  margin-bottom: -1vh; }
-
-#jajaja-icon-bottle {
-  transform: rotate(90deg);
-  max-width: 60%;
-  max-height: 60%; }
-
-#jajaja-icon-1 {
-  position: relative;
-  top: 3vh; }
-
-#jajaja-icon-bottle-text {
-  position: relative;
-  top: 1vh; }
-
-.bg-1 {
-  background-image: url("../../public/img/FONDS-COULEUR/bleu.jpg"); }
-
-.bg-2 {
-  background-image: url("../../public/img/FONDS-COULEUR/Sans-titre-1.jpg"); }
-
-.bg-3 {
-  background-image: url("../../public/img/KODAK/10.jpg"); }
-
-.bg-4 {
-  background-image: url("../../public/img/KODAK/16.jpg"); }
-
-.bg-5 {
-  background-image: url("../../public/img/KODAK/21.jpg"); }
-
-.bg-6 {
-  background-image: url("../../public/img/KODAK/27.jpg"); }
-
-.bg-7 {
-  background-image: url("../../public/img/KODAK/8.jpg"); }
-
-.bg-8 {
-  background-image: url("../../public/img/FONDS-COULEUR/Capture.png"); }
+          .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon .jajaja-icon-name p {
+            background-color: #FEFEE2; }
+        .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-cactus-text, .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-tacos-text, .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-bottle-text {
+          width: 42%; }
+        .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-ghettoblaster-text {
+          width: 36%; }
+        .jajaja-section-1 .jajaja-desktop-icons .jajaja-icons .jajaja-icon #jajaja-icon-avocat-text {
+          width: 50%; }
 
 .jajaja-section-2 {
-  width: auto;
-  height: 110vh;
-  color: #e63329 !important; }
+  height: 100vh;
+  color: #e63329 !important;
+  width: 100%;
+  overflow-y: scroll; }
   .jajaja-section-2 .jajaja-swiper {
-    height: 100vh;
     margin: auto; }
+  .jajaja-section-2 h1, .jajaja-section-2 .h1 {
+    font-size: 280%; }
+  .jajaja-section-2 h2, .jajaja-section-2 .h2, .jajaja-section-2 h3, .jajaja-section-2 .h3, .jajaja-section-2 h4, .jajaja-section-2 .h4, .jajaja-section-2 h5, .jajaja-section-2 .h5 {
+    font-size: 180%; }
+  .jajaja-section-2 p {
+    font-size: 80%;
+    font-family: "Helvetica Neue Bolderx2"; }
+
+.jajaja-body {
+  background-color: #fff7c7 !important; }
 
 .jajaja-swiper-slide {
-  padding: 10% 0 0 0; }
+  padding: 0% 0 10% 0; }
   .jajaja-swiper-slide h1, .jajaja-swiper-slide .h1, .jajaja-swiper-slide h2, .jajaja-swiper-slide .h2, .jajaja-swiper-slide h3, .jajaja-swiper-slide .h3, .jajaja-swiper-slide h4, .jajaja-swiper-slide .h4, .jajaja-swiper-slide h5, .jajaja-swiper-slide .h5 {
-    color: #e63329 !important; }
+    color: #e63329; }
   .jajaja-swiper-slide svg {
     height: 20%;
     width: 20%; }
-  .jajaja-swiper-slide .jajaja-swiper-slide-left {
-    width: 50%; }
   .jajaja-swiper-slide .jajaja-swiper-slide-right {
-    width: 50%;
     padding: 10% 5% 5% 5%; }
   .jajaja-swiper-slide #jajaja-swiper-slide-1 {
     display: flex;
+    flex-direction: row;
+    color: #d72547 !important; }
+    .jajaja-swiper-slide #jajaja-swiper-slide-1 h1, .jajaja-swiper-slide #jajaja-swiper-slide-1 .h1 {
+      color: #d72547 !important; }
+    .jajaja-swiper-slide #jajaja-swiper-slide-1 img {
+      max-width: 80%;
+      max-height: 80%;
+      position: relative;
+      left: 5rem;
+      top: 5vh; }
+  .jajaja-swiper-slide h1, .jajaja-swiper-slide .h1, .jajaja-swiper-slide h2, .jajaja-swiper-slide .h2, .jajaja-swiper-slide h3, .jajaja-swiper-slide .h3, .jajaja-swiper-slide h4, .jajaja-swiper-slide .h4, .jajaja-swiper-slide h5, .jajaja-swiper-slide .h5 {
+    font-family: 'JAJAJA';
+    text-align: center; }
+
+#jajaja-swiper-slide-2 {
+  color: #d72547 !important; }
+  #jajaja-swiper-slide-2 h2, #jajaja-swiper-slide-2 .h2 {
+    font-size: 250%;
+    color: #d72547 !important; }
+  #jajaja-swiper-slide-2 img {
+    max-width: 80%;
+    max-height: 80%; }
+
+#jajaja-swiper-slide-3 {
+  color: #ee691c !important; }
+  #jajaja-swiper-slide-3 h1, #jajaja-swiper-slide-3 .h1, #jajaja-swiper-slide-3 h2, #jajaja-swiper-slide-3 .h2, #jajaja-swiper-slide-3 h3, #jajaja-swiper-slide-3 .h3, #jajaja-swiper-slide-3 h4, #jajaja-swiper-slide-3 .h4, #jajaja-swiper-slide-3 h5, #jajaja-swiper-slide-3 .h5 {
+    color: #ee691c !important; }
+  #jajaja-swiper-slide-3 .jajaja-img-max-width {
+    max-width: 95%; }
+  #jajaja-swiper-slide-3 .jajaja-img-max-height {
+    max-width: 99%; }
+  #jajaja-swiper-slide-3 .boxed-img {
+    max-width: 70%; }
+  #jajaja-swiper-slide-3 .jajaja-img-container {
+    margin-top: -1.5vh; }
+  #jajaja-swiper-slide-3 .jajaja-bg-color-block {
+    background-color: #ee691c;
+    color: #fff7c7;
+    text-align: center; }
+    #jajaja-swiper-slide-3 .jajaja-bg-color-block h2, #jajaja-swiper-slide-3 .jajaja-bg-color-block .h2 {
+      color: #fff7c7 !important; }
+  #jajaja-swiper-slide-3 .jajaja-swiper-3-section {
+    display: flex;
     flex-direction: row; }
+    #jajaja-swiper-slide-3 .jajaja-swiper-3-section .jajaja-swiper-slide-mid {
+      width: 50%; }
 
 .jajaja-wrapper {
   border-radius: 10px;
@@ -10048,13 +10058,18 @@ main {
   .jajaja-wrapper .jajaja-modal-header {
     cursor: grab;
     height: 6vh;
-    border-bottom: 3px solid black; }
+    border-bottom: 3px solid black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; }
   .jajaja-wrapper .jajaja-header-close-btn {
     position: relative;
     left: 45%;
     font-size: 140%;
     bottom: 8%;
     color: black !important; }
+  .jajaja-wrapper .jajaja-wrapper-content {
+    font-family: 'Helvetica Neue Bolderx2';
+    color: black; }
 
 .jajaja-header-btns {
   width: 4rem;
@@ -10150,6 +10165,10 @@ main {
   height: 80vh;
   z-index: 1;
   color: #e63329 !important; }
+  .modal-recipe-wrapper header h3, .modal-recipe-wrapper header .h3 {
+    position: relative;
+    bottom: 4vh;
+    font-size: 120%; }
   .modal-recipe-wrapper iframe {
     width: 100%;
     height: 67vh; }
@@ -10203,7 +10222,7 @@ main {
   text-align: center;
   background-color: #fafbf7;
   border-radius: 10px;
-  -webkit-text-stroke: 1px solid #fff;
+  color: black;
   font-family: 'JAJAJA'; }
   #popup header {
     height: 10vh;
@@ -10212,11 +10231,15 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
+  #popup h2, #popup .h2 {
+    font-size: 200%; }
 
 .jajaja-popup-header {
   height: 9vh;
   border-bottom: 3px solid black;
-  margin-bottom: 2vh; }
+  margin-bottom: 2vh;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; }
 
 .jajaja-header-close-btn {
   position: relative;
@@ -10276,11 +10299,14 @@ main {
       border: 1px black;
       margin-bottom: 5%; }
       .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu .jajaja-popup-icon img {
-        width: 20%; }
+        width: 30%; }
       .jajaja-popup-content .jajaja-popup-row .jajaja-popup-menu .jajaja-popup-icon-name {
         position: relative;
         top: 10%;
-        font-size: 100%; }
+        font-size: 120%; }
+
+#jajaja-change-music img {
+  width: 35%; }
 
 .popup-background {
   display: none;
@@ -10292,7 +10318,7 @@ main {
   border-radius: 10px;
   -webkit-text-stroke: 1px solid #fff;
   transform: translate(-40%, -50%);
-  overflow-y: scroll; }
+  overflow-y: hidden; }
   .popup-background h3, .popup-background .h3 {
     color: black !important; }
   .popup-background .popup-container {
@@ -10315,19 +10341,33 @@ main {
   .jajaja-background #jajaja-bg-2 {
     background-image: url("../../public/img/FONDS-COULEUR/Sans-titre-1.jpg"); }
   .jajaja-background #jajaja-bg-3 {
-    background-image: url("../../public/img/KODAK/10.jpg"); }
+    background-image: url("../../public/img/FONDS-COULEUR/baground-buena-onda.jpg"); }
   .jajaja-background #jajaja-bg-4 {
-    background-image: url("../../public/img/KODAK/16.jpg"); }
+    background-image: url("../../public/img/KODAK/8.jpg"); }
   .jajaja-background #jajaja-bg-5 {
-    background-image: url("../../public/img/KODAK/21.jpg"); }
+    background-image: url("../../public/img/KODAK/16.jpg"); }
   .jajaja-background #jajaja-bg-6 {
     background-image: url("../../public/img/KODAK/27.jpg"); }
-  .jajaja-background #jajaja-bg-7 {
-    background-image: url("../../public/img/KODAK/8.jpg"); }
-  .jajaja-background #jajaja-bg-8 {
-    background-image: url("../../public/img/FONDS-COULEUR/Capture.png"); }
   .jajaja-background .jajaja-background-container:hover {
     border: 3px solid rgba(204, 33, 28, 0.7); }
+
+.bg-1 {
+  background-image: url("../../public/img/FONDS-COULEUR/bleu.jpg"); }
+
+.bg-2 {
+  background-image: url("../../public/img/FONDS-COULEUR/Sans-titre-1.jpg"); }
+
+.bg-3 {
+  background-image: url("../../public/img/FONDS-COULEUR/baground-buena-onda.jpg"); }
+
+.bg-4 {
+  background-image: url("../../public/img/KODAK/8.jpg"); }
+
+.bg-5 {
+  background-image: url("../../public/img/KODAK/16.jpg"); }
+
+.bg-6 {
+  background-image: url("../../public/img/KODAK/27.jpg"); }
 
 .popup-clock {
   display: none;
@@ -10356,6 +10396,164 @@ main {
     transform: scale(1.1);
     color: #fafbf8 !important;
     background-color: #e63329; }
+
+.popup-contact {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 10px;
+  -webkit-text-stroke: 1px solid #fff;
+  font-family: 'JAJAJA';
+  text-align: center;
+  width: 20rem;
+  z-index: 5000000000000000000000;
+  display: none;
+  transform: translate(-50%, -50%);
+  background-color: white; }
+  .popup-contact header {
+    height: 9vh;
+    border-bottom: 3px solid black;
+    margin-bottom: 2vh;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; }
+  .popup-contact .jajaja-contact-content {
+    padding: 1vh 1rem; }
+    .popup-contact .jajaja-contact-content h2, .popup-contact .jajaja-contact-content .h2 {
+      margin-bottom: 2vh;
+      text-align: center;
+      font-size: 180%;
+      color: #e63329;
+      -webkit-text-stroke: 1px #fafbf7; }
+    .popup-contact .jajaja-contact-content input, .popup-contact .jajaja-contact-content textarea {
+      border-radius: 5px;
+      border: 2px solid #e63329;
+      font-family: 'Helvetica Neue Bolderx1'; }
+    .popup-contact .jajaja-contact-content ::placeholder {
+      color: #e63329;
+      font-family: 'Helvetica Neue Bolderx1'; }
+
+.jajaja-input-btn {
+  background-color: #e63329;
+  padding: 6px 26px;
+  font-size: 140%;
+  color: #fff7c7;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 2px #e63329;
+  font-family: 'JAJAJA' !important; }
+
+.jajaja-input-btn :hover {
+  transform: scale(1.2); }
+
+.popup-contacts {
+  width: 15%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-text-stroke: 1px solid #fff;
+  font-family: 'JAJAJA';
+  display: none;
+  z-index: 50000000000000000; }
+  .popup-contacts header {
+    height: 9vh;
+    border-bottom: 3px solid black;
+    margin-bottom: 2vh;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; }
+  .popup-contacts .jajaja-contacts-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1vh;
+    text-align: center; }
+    .popup-contacts .jajaja-contacts-content .jajaja-contacts-section img {
+      max-width: 10%;
+      max-height: 10%;
+      stroke: #e63329; }
+    .popup-contacts .jajaja-contacts-content .jajaja-contacts-section a {
+      color: #e63329; }
+    .popup-contacts .jajaja-contacts-content .jajaja-contacts-section a:hover {
+      color: rgba(204, 33, 28, 0.9); }
+
+.popup-music {
+  position: absolute;
+  top: 0.5%;
+  left: 0%;
+  width: 30rem;
+  max-width: 100%;
+  z-index: 1;
+  display: none;
+  background-color: #fff7c7;
+  border-radius: 10px; }
+  .popup-music h2, .popup-music .h2 {
+    font-family: 'JAJAJA';
+    -webkit-text-stroke: 1px #fff7c7;
+    font-size: 600%;
+    text-align: center;
+    color: #e63329; }
+  .popup-music header {
+    height: 9vh;
+    border-bottom: 3px solid black;
+    margin-bottom: 2vh;
+    background-color: #fff7c7 !important;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; }
+  .popup-music hr {
+    color: black;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    height: 3px;
+    border: 2px solid black; }
+  .popup-music .jajaja-music-content {
+    padding: 10px; }
+  .popup-music .jajaja-track-infos {
+    color: black !important; }
+    .popup-music .jajaja-track-infos #jajaja-track-name {
+      font-family: "Helvetica Neue Bolderx3" !important; }
+  .popup-music .jajaja-playlists-list {
+    border: 2px solid black;
+    background-color: #fff;
+    margin: 2vh 15px;
+    overflow: scroll;
+    font-family: 'Helvetica Neue Normal';
+    color: black;
+    height: 120px; }
+    .popup-music .jajaja-playlists-list .jajaja-playlist-item {
+      border: 1px solid black; }
+  .popup-music #audioCanvas {
+    background-color: black;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black; }
+  .popup-music #nextButton {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid black; }
+  .popup-music #prevButton {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid black; }
+  .popup-music #playPauseButton {
+    border: 2px solid black; }
+  .popup-music .jajaja-btn-audioplayer {
+    display: flex;
+    flex-direction: row; }
+    .popup-music .jajaja-btn-audioplayer .jajaja-controler-btn-group, .popup-music .jajaja-btn-audioplayer .jajaja-mute-btn-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 1vh 1rem; }
+    .popup-music .jajaja-btn-audioplayer .jajaja-mute-btn-group {
+      justify-content: space-between; }
+      .popup-music .jajaja-btn-audioplayer .jajaja-mute-btn-group button {
+        border-radius: 5px !important;
+        border: 2px solid black !important;
+        margin-right: 10px; }
+  .popup-music button {
+    background-color: #fff7c7 !important;
+    height: 5vh;
+    width: 4rem;
+    border: none; }
+  .popup-music svg {
+    width: 80%; }
 
 .swiper-slide {
   width: 80%;
@@ -10403,16 +10601,20 @@ main {
   color: white;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
   text-align: center; }
+  .jajaja-recipe-video-txt .swiper-recipe-next {
+    font-size: 200%;
+    font-weight: bolder; }
+  .jajaja-recipe-video-txt i {
+    font-size: 200%; }
   .jajaja-recipe-video-txt .swiper-button-next {
     font-size: 100%;
     position: absolute;
-    top: 90vh;
+    top: 80vh;
     right: 1rem;
     z-index: 10000;
     animation: wheelTextColor 20s infinite;
     background-color: rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    border-radius: 20px; }
+    padding: 2rem; }
   .jajaja-recipe-video-txt .jajaja-recipe-video-txt-icons {
     width: 100%; }
 
@@ -10519,6 +10721,21 @@ main {
   #recipe-3 .jajaja-recipes-recipe-txt .jajaja-recipes-recipe-btn button {
     background-color: #008b46;
     color: #f79e0b; }
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.audio-graph {
+  width: 100%;
+  height: 50px;
+  background-color: #eee; }
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
