@@ -98,37 +98,8 @@ modalAllRecipeWrapper.addEventListener('click', ()=>{
     modalMusicWrapper.style.zIndex = 'auto';
 });
 
-// Change vue of popup
-const changeBackGround = document.querySelector('#jajaja-change-bg');
-const changeMusic = document.querySelector('#jajaja-change-music');
-const changeMenu = document.querySelector('#jajaja-change-howto');
-const popupContent = document.querySelector('.jajaja-popup-content');
-const popupBackground = document.querySelector('.popup-background');
-const modalBgWrapperCloser = document.querySelector('#modal-bg-close');
-const changeClock = document.querySelector('#jajaja-change-clock');
-const popupClock = document.querySelector('.popup-clock');
-const modalHourWrapperCloser = document.querySelector('#modal-popup-close');
+// CHANGE VUE OF POPUP
 
-
-changeBackGround.addEventListener('click', () =>{
-    popupBackground.style.display = 'block'
-    popupClock.style.display = 'none'
-})
-
-modalBgWrapperCloser.addEventListener('click',() =>{
-    popupBackground.style.display = 'none'
-})
-
-
-
-changeClock.addEventListener('click', () =>{
-    popupClock.style.display = 'block';
-    popupBackground.style.display = 'none'
-})
-
-modalHourWrapperCloser.addEventListener('click',() =>{
-    popupClock.style.display = 'none'
-})
 
 
 // CHANGE BACKGROUND 
@@ -296,53 +267,6 @@ closeModalPacmanBtn.addEventListener('click',closeSocialModal);
 // });
 
 
-
-
-
-// MODAL MUSIC
-
-// const openModalMusicBtn = document.querySelector('#open-modal-music')
-// const closeModalMusic = document.querySelector('.modal-music-close-btn')
-// const modalMusicWrapper = document.querySelector(".modal-music-wrapper"),
-// ModalMusicHeader = modalMusicWrapper.querySelector(".modal-music-header");
-// function onDrag5({movementX, movementY}){
-//   let getModalMusicStyle = window.getComputedStyle(modalMusicWrapper);
-//   let leftModalMusicVal = parseInt(getModalMusicStyle.left);
-//   let topModalMusicVal = parseInt(getModalMusicStyle.top);
-//   modalMusicWrapper.style.left = `${leftModalMusicVal + movementX}px`;
-//   modalMusicWrapper.style.top = `${topModalMusicVal + movementY}px`;
-// }
-// ModalMusicHeader.addEventListener("mousedown", ()=>{
-//     ModalMusicHeader.classList.add("active");
-//     ModalMusicHeader.addEventListener("mousemove", onDrag5);
-// });
-// document.addEventListener("mouseup", ()=>{
-//     ModalMusicHeader.classList.remove("active");
-//     ModalMusicHeader.removeEventListener("mousemove", onDrag5);
-// });
-
-// function openMusicModal() {
-//     modalMusicWrapper.style.display = 'block';
-// };
-
-// function closeMusicModal() {
-//     modalMusicWrapper.style.display = 'none';
-// };
-
-// openModalMusicBtn.addEventListener('click', openMusicModal);
-// closeModalMusic.addEventListener('click',closeMusicModal);
-
-// modalMusicWrapper.addEventListener('click', ()=>{
-//     modalMusicWrapper.style.zIndex = 1000;
-//     modalMusicWrapper.style.position = 'absolute';
-//     wrapper.style.zIndex = 'auto';
-//     modalRecipeWrapper.style.zIndex = 'auto';
-//     modalAllRecipeWrapper.style.zIndex = 'auto';
-//     modalSocialWrapper.style.zIndex = 'auto';
-// });
-
-
-
 // MODAL HOW IT WORKS 
 
 const hIWModal = document.querySelector('.modal-recipe-howto-wrapper');
@@ -368,6 +292,8 @@ openHIWModal.addEventListener("click", () => {
 closeHIWModal.addEventListener('click',() =>{
     hIWModal.style.display = 'none';
 })
+
+
 
 
 

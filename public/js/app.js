@@ -74,10 +74,10 @@ window.onResize = function() {
 
 // RIGHT CLICK
 
-const rightClickCloseBtn = document.querySelector("#right-click-close-btn")
+const rightClickCloseBtn = document.querySelector("#tools-close-btn")
 const el = (sel, par) => (par||document).querySelector(sel);
 
-const elPopup = el("#popup");
+const elPopup = el("#popup-tools");
 
 function rightClick(evt) {
     evt.preventDefault();
@@ -98,6 +98,7 @@ section1.addEventListener("click",()=>{
 rightClickCloseBtn.addEventListener('click',()=>{
     elPopup.style.display = 'none';
 })
+
 
 // FORMULAIRE
 
@@ -324,6 +325,7 @@ document.addEventListener("mouseup", ()=>{
     ModalRecipeHeader.removeEventListener("mousemove", onDrag2);
 });
 
+
 function openRecipeModal() {
     modalRecipeWrapper.style.zIndex = '1200000'
     modalRecipeWrapper.style.display = 'block';
@@ -332,6 +334,7 @@ function openRecipeModal() {
 function closeRecipeModal() {
     modalRecipeWrapper.style.display = 'none';
 };
+
 
 openModalRecipeBtn.addEventListener('click', openRecipeModal);
 
@@ -344,6 +347,10 @@ modalRecipeWrapper.addEventListener('click', ()=>{
     modalAllRecipeWrapper.style.zIndex = 'auto';
     modalMusicWrapper.style.zIndex = 'auto';
 });
+
+
+
+
 
 
 
