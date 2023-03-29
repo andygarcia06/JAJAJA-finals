@@ -291,14 +291,6 @@ function drawWaveform() {
 
     // MUTE/UNMUTE
 
-    const mediaElements = document.querySelectorAll("audio, video");
-
-        function setMute(mute) {
-        mediaElements.forEach(function(element) {
-            element.muted = mute;
-        });
-}
-
 const muteAll = document.querySelector("#jajaja-volume");
 muteAll.addEventListener("click", function() {
   setMute(!mediaElements[0].muted); // inverse la valeur du premier élément

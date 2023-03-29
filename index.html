@@ -85,7 +85,10 @@
                         <a class="to-next-section nav-link text-primary"  href="#jajaja-section-txt-1">Bio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-primary" id="jajaja-volume">Volume</a>
+                        <a href="#" class="nav-link text-primary" id="jajaja-volume" onclick="openVolumeController()">Volume</a>
+                            <div class="volume-control">
+                                <input type="range" min="0" max="1" step="0.02" value="1" id="volume-slider">
+                            </div>
                     </li>
                     <li class="nav-item text-primary">
                         <a href="#" class="nav-link text-primary" id="jajaja-contact-trigger">Contact</a>
@@ -482,6 +485,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+
 
     
 
@@ -498,23 +506,43 @@
     <script src="./public/js/features.js"></script>
     <script type="text/javascript" src="./public/js/music.js" async></script>
     <script>
-        let currentSection = 1;
+        const volumeSlider = document.getElementById('volume-slider');
+        const audios = document.querySelectorAll('audio');
+        const frames = document.querySelectorAll('iframe');
+        const volumePopup = document.querySelector('.volume-control')
+        
+        audios.forEach(audio => {
+          audio.volume = volumeSlider.value;
+        
+          volumeSlider.addEventListener('input', () => {
+            audio.volume = volumeSlider.value;
+          });
+        });
+        
+        frames.forEach(frame => {
+          const frameWindow = frame.contentWindow;
+        
+          if (frameWindow) {
+            frameWindow.addEventListener('load', () => {
+              const frameAudios = frameWindow.document.querySelectorAll('audio');
+        
+              frameAudios.forEach(frameAudio => {
+                frameAudio.volume = volumeSlider.value;
+        
+                volumeSlider.addEventListener('input', () => {
+                  frameAudio.volume = volumeSlider.value;
+                });
+              });
+            });
+          }
+        });
+        
+        function openVolumeController(){
+            volumePopup.style.display = 'block';
+        }
 
-document.addEventListener('wheel', event => {
-  event.preventDefault();
 
-  const delta = event.deltaY;
-  const sections = document.querySelectorAll('section');
-  const numSections = sections.length;
 
-  if (delta < 0 && currentSection > 1) {
-    currentSection--;
-  } else if (delta > 0 && currentSection < numSections) {
-    currentSection++;
-  }
-
-  sections[currentSection - 1].scrollIntoView({behavior: 'smooth'});
-});
 
     </script>
 

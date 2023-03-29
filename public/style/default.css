@@ -10294,6 +10294,7 @@ main {
   border-top: 2px solid black; }
 
 .popup-background {
+  display: none;
   width: 20rem;
   position: absolute;
   top: 115%;
@@ -10459,6 +10460,44 @@ main {
     .popup-contacts .jajaja-contacts-content .jajaja-contacts-section a:hover {
       color: rgba(204, 33, 28, 0.9); }
 
+.popup-volume-controller {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; }
+
+.volume-control {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 15rem;
+  top: 5vh;
+  width: 30%;
+  padding: 10px;
+  background-color: white;
+  height: 5vh;
+  z-index: 50000000000000001; }
+
+#volume-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: rgba(204, 33, 28, 0.9);
+  border-radius: 5px;
+  outline: none; }
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+
+#volume-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  cursor: pointer; }
+
 .popup-music {
   position: absolute;
   top: 0.5%;
@@ -10508,6 +10547,7 @@ main {
   .popup-music #audioCanvas {
     background-color: black;
     width: 100%;
+    height: 15vh;
     padding-bottom: 10px;
     border-bottom: 2px solid black; }
   .popup-music #nextButton {

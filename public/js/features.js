@@ -1,30 +1,41 @@
-// SCROLL TO NEXT SECTION 
+// POPUP MUSIC
 
-const sections = document.querySelectorAll("section");
-const windowHeight = window.innerHeight;
-
-window.addEventListener("wheel", (event) => {
-  event.preventDefault();
-
-  const currentPosition = window.scrollY;
-
-  sections.forEach((section, index) => {
-    const sectionTop = section.offsetTop;
-    if (currentPosition >= sectionTop && currentPosition < sectionTop + windowHeight) {
-      if (index !== sections.length - 1) {
-        const nextSectionTop = sections[index + 1].offsetTop;
-        window.scrollTo({
-          top: nextSectionTop,
-          behavior: "smooth"
-        });
-      }
-    }
-  });
+const musicWrapper = document.querySelector(".popup-music-wrapper"),
+headerModalMusic = musicWrapper.querySelector(".modal-music-header");
+function dragMusicModal({movementX, movementY}){
+  let getStyle = window.getComputedStyle(musicWrapper);
+  let leftVal = parseInt(getStyle.left);
+  let topVal = parseInt(getStyle.top);
+  musicWrapper.style.left = `${leftVal + movementX}px`;
+  musicWrapper.style.top = `${topVal + movementY}px`;
+}
+headerModalMusic.addEventListener("mousedown", ()=>{
+    headerModalMusic.classList.add("active");
+    headerModalMusic.addEventListener("mousemove", dragMusicModal);
+});
+headerModalMusic.addEventListener("mouseup", ()=>{
+    headerModalMusic.classList.remove("active");
+    headerModalMusic.removeEventListener("mousemove", dragMusicModal);
 });
 
+// SCROLL TO NEXT SECTION 
+let currentSection = 1;
 
+document.addEventListener('wheel', event => {
+  event.preventDefault();
 
+  const delta = event.deltaY;
+  const sections = document.querySelectorAll('section');
+  const numSections = sections.length;
 
+  if (delta < 0 && currentSection > 1) {
+    currentSection--;
+  } else if (delta > 0 && currentSection < numSections) {
+    currentSection++;
+  }
+
+  sections[currentSection - 1].scrollIntoView({behavior: 'smooth'});
+});
 
 
 
@@ -65,27 +76,7 @@ triggerPopupToolsBg.addEventListener('click',openPopupToolsBg)
 
 
 
-// POPUP MUSIC
 
-const { ClickAwayListener } = require("@material-ui/core");
-
-const musicWrapper = document.querySelector(".popup-music-wrapper"),
-headerModalMusic = musicWrapper.querySelector(".modal-music-header");
-function dragMusicModal({movementX, movementY}){
-  let getStyle = window.getComputedStyle(musicWrapper);
-  let leftVal = parseInt(getStyle.left);
-  let topVal = parseInt(getStyle.top);
-  musicWrapper.style.left = `${leftVal + movementX}px`;
-  musicWrapper.style.top = `${topVal + movementY}px`;
-}
-headerModalMusic.addEventListener("mousedown", ()=>{
-    headerModalMusic.classList.add("active");
-    headerModalMusic.addEventListener("mousemove", dragMusicModal);
-});
-headerModalMusic.addEventListener("mouseup", ()=>{
-    headerModalMusic.classList.remove("active");
-    headerModalMusic.removeEventListener("mousemove", dragMusicModal);
-});
 
 
 
